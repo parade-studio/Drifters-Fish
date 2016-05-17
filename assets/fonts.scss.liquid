@@ -1,0 +1,25 @@
+{% comment %}Make @font-face declarations here{% endcomment %}
+
+@font-face {
+  font-family: 'DomaineTextWeb-Light';
+  src:  url('{{ "DomaineTextWeb-Light.eot" | asset_url }}'); /* IE9 Compat Modes */
+  src:  url('{{ "DomaineTextWeb-Light.woff" | asset_url }}') format('woff'),
+        url('{{ "DomaineTextWeb-Light.woff2" | asset_url }}') format('woff2');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'DomaineTextWeb-LightItalic';
+  src:  url('{{ "DomaineTextWeb-LightItalic.eot" | asset_url }}'); /* IE9 Compat Modes */
+  src:  url('{{ "DomaineTextWeb-LightItalic.woff" | asset_url }}') format('woff'),
+        url('{{ "DomaineTextWeb-LightItalic.woff2" | asset_url }}') format('woff2');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Simplon Mono';
+  src: url('{{ "simplonmono-medium-webfont.eot" | asset_url }}'); /* IE9 Compat Modes */
+  src: url('{{ "simplonmono-medium-webfont.woff" | asset_url }}') format('woff'),
+       url('{{ "simplonmono-medium-webfont.ttf" | asset_url }}') format('truetype');
+  font-weight: normal;
+}
