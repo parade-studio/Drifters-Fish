@@ -5,7 +5,7 @@
 # example code
 :api_key: 338497086c61377417447686bd4c81a5
 :password: 41d984204fb3d2e43593f4b633539093
-:store: storename.myshopify.com
+:store: driftersfish.myshopify.com
 :theme_id:
 :ignore_files:
   - settings_data.json
