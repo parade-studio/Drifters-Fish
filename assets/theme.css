@@ -228,7 +228,27 @@ header {
   top: 0;
   right: 0;
   left: 0;
-  text-align: center; }
+  text-align: center;
+  z-index: 1; }
+
+nav {
+  background-color: #0A5593;
+  color: white;
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  transition: height 150ms ease; }
+
+.nav__container {
+  position: absolute;
+  bottom: 0;
+  border: 1px solid white;
+  margin: 2.35765%;
+  width: calc(100% - 4.7153%); }
+
+.nav__trigger {
+  cursor: pointer; }
 
 .section__content {
   max-width: 1200px;
@@ -276,17 +296,6 @@ header {
   text-align: center; }
   .section--signature img {
     width: 200px; }
-
-nav {
-  position: absolute;
-  top: -100vh;
-  right: 0;
-  bottom: 100vh;
-  left: 0;
-  background-color: #0A5593;
-  color: white;
-  display: none;
-  text-align: center; }
 
 .section--intro {
   text-align: center; }

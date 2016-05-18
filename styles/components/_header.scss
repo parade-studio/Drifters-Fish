@@ -1,4 +1,26 @@
 header {
   @include position(fixed, 0 0 null 0);
   text-align: center;
+  z-index: 1;
+}
+
+nav {
+  background-color: $brand-blue;
+  color: white;
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  transition: height $base-duration $base-timing;
+}
+
+.nav__container {
+  @include position(absolute, null null 0 null);
+  border: 1px solid white;
+  margin: flex-gutter();
+  width: calc(100% - #{2 * flex-gutter()});
+}
+
+.nav__trigger {
+  cursor: pointer;
 }
