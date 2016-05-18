@@ -204,6 +204,9 @@ hr {
   border-top: 0;
   margin: 1.5em 0; }
 
+.padded {
+  padding: 3rem 0; }
+
 html {
   box-sizing: border-box; }
 
@@ -231,18 +234,31 @@ header {
   height: 100%;
   min-height: 100vh;
   position: relative; }
+  .section--full:before {
+    min-height: 100vh; }
 
 .section--half {
   height: 100%;
   min-height: 50vh;
   position: relative; }
+  .section--half:before {
+    min-height: 50vh; }
 
-.section__content--middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%; }
+.section--full,
+.section--half {
+  text-align: center; }
+  .section--full:before,
+  .section--half:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; }
+  .section--full .section__content,
+  .section--half .section__content {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%; }
 
 .section--signature {
   background-color: #021D2C;
@@ -297,25 +313,49 @@ nav {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 31.76157%; }
+  width: 100%; }
   .one-thirds:last-child {
     margin-right: 0; }
+  @media screen and (min-width: 600px) {
+    .one-thirds {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      .one-thirds:last-child {
+        margin-right: 0; } }
 
 .two-thirds {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 65.88078%; }
+  width: 100%; }
   .two-thirds:last-child {
     margin-right: 0; }
+  @media screen and (min-width: 600px) {
+    .two-thirds {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%; }
+      .two-thirds:last-child {
+        margin-right: 0; } }
 
 .five-sixths {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 82.94039%; }
+  width: 100%; }
   .five-sixths:last-child {
     margin-right: 0; }
+  @media screen and (min-width: 600px) {
+    .five-sixths {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 82.94039%; }
+      .five-sixths:last-child {
+        margin-right: 0; } }
 
 .full {
   float: left;
@@ -326,7 +366,10 @@ nav {
     margin-right: 0; }
 
 .shift-one-sixths {
-  margin-left: 17.05961%; }
+  margin-left: 0%; }
+  @media screen and (min-width: 600px) {
+    .shift-one-sixths {
+      margin-left: 17.05961%; } }
 
 .section--buy img {
   float: left;
