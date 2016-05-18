@@ -1,7 +1,26 @@
-{% comment %}
-  Very important reading:
-  http://docs.shopify.com/themes/liquid-basics/what-is-true-and-false-in-liquid
-  Learn how to read theme settings in your theme.
-{% endcomment %}
+<section class="section--full section--intro">
+  <div class="section__content section__content--middle">
+    <a id="logo" href="/">
+      {{ 'df-logo-stacked-blue.svg' | asset_url | img_tag: shop.name }}
+    </a>
+  </div>
+</section>
 
-{{ page.content }}
+<section class="section--full section--video alabaster-background">
+  <div class="section__content">
+    <img src="{{ 'video.png' | asset_url }}" alt="">
+    <h1>A husband and wife team bringing sustainably harvested salmon from the sea, to your table.</h1>
+  </div>
+</section>
+
+<section class="section--full">
+  <div class="section__content">
+    <h1>Information about Michael and Nelly goes here</h1>
+  </div>
+</section>
+
+<section class="section--full solitude-background">
+  <div class="section__content">
+    <h1>Information about purchasing fish goes here</h1>
+  </div>
+</section>

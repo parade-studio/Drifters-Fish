@@ -178,15 +178,24 @@ h6 {
   line-height: 1.2;
   margin: 0 0 0.75em; }
 
+h1 {
+  font-size: 4.5rem; }
+
+h2 {
+  font-size: 2.875rem; }
+
+h3 {
+  font-size: 1.75rem; }
+
 p {
   margin: 0 0 0.75em; }
 
 a {
-  color: #FC7523;
+  color: #fff;
   text-decoration: none;
   transition: color 150ms ease; }
   a:active, a:focus, a:hover {
-    color: #bd581a; }
+    color: #FC7523; }
 
 hr {
   border-bottom: 1px solid #ddd;
@@ -201,8 +210,12 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-#logo img {
-  width: 200px; }
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  text-align: center; }
 
 .section__content {
   max-width: 1200px;
@@ -214,9 +227,84 @@ html {
     content: "";
     display: block; }
 
+.section--full {
+  height: 100%;
+  min-height: 100vh;
+  position: relative; }
+
+.section--half {
+  height: 100%;
+  min-height: 50vh;
+  position: relative; }
+
+.section__content--middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; }
+
 .section--signature {
   background-color: #021D2C;
   color: #fff;
   text-align: center; }
   .section--signature img {
     width: 200px; }
+
+nav {
+  position: absolute;
+  top: -100vh;
+  right: 0;
+  bottom: 100vh;
+  left: 0;
+  background-color: #0A5593;
+  color: white;
+  display: none;
+  text-align: center; }
+
+.section--intro {
+  text-align: center; }
+  .section--intro #logo img {
+    width: 200px; }
+
+.section--profile .profile__image {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  .section--profile .profile__image:last-child {
+    margin-right: 0; }
+
+.section--profile .profile__bio {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  font-size: 1.1875rem; }
+  .section--profile .profile__bio:last-child {
+    margin-right: 0; }
+
+.alabaster-background {
+  background-color: #FCFCFA; }
+
+.solitude-background {
+  background-color: #E6EEF5; }
+
+.snow-background {
+  background-color: #FDFBFA; }
+
+.section--buy img {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%; }
+  .section--buy img:last-child {
+    margin-right: 0; }
+
+.section--buy p {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  .section--buy p:last-child {
+    margin-right: 0; }

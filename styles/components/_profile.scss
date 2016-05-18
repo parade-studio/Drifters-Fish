@@ -1,0 +1,9 @@
+.section--profile {
+  .profile__image {
+    @include span-columns(4);
+  }
+  .profile__bio {
+    @include span-columns(8);
+    font-size: 1.1875rem;
+  }
+}

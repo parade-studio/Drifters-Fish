@@ -1,0 +1,7 @@
+nav {
+  @include position(absolute, -100vh 0 100vh 0);
+  background-color: $brand-blue;
+  color: white;
+  display: none;
+  text-align: center;
+}

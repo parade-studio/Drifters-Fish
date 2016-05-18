@@ -1,9 +1,5 @@
 <header>
-  <a href="/cart">{{ cart.item_count }} {{ cart.item_count | pluralize: 'item', 'items' }} ({{ cart.total_price | money }})</a>
-
-  <a id="logo" href="/">
-    {{ 'df-logo-stacked-blue.svg' | asset_url | img_tag: shop.name }}
-  </a>
-
-  {% include 'site-nav' %}
+  <div class="section__content">
+    <p>&#9776;</p>
+  </div>
 </header>

@@ -2,3 +2,21 @@
   @include outer-container;
   padding: $base-spacing 0;
 }
+
+.section--full {
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.section--half {
+  height: 100%;
+  min-height: 50vh;
+  position: relative;
+}
+
+.section__content--middle {
+  @include position(absolute, 50% null null 50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+}

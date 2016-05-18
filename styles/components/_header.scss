@@ -1,5 +1,4 @@
-#logo {
-  img {
-    width: 200px;
-  }
+header {
+  @include position(fixed, 0 0 null 0);
+  text-align: center;
 }
