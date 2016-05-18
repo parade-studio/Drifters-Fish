@@ -28,6 +28,7 @@ h3 {
 }
 
 p {
+  font-size: 1.1875rem;
   margin: 0 0 $small-spacing;
 }
 
@@ -51,6 +52,15 @@ hr {
   margin: $base-spacing 0;
 }
 
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
 .padded {
   padding: 3rem 0;
+}
+.bottom {
+  margin-bottom: 0;
 }

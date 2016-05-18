@@ -1,6 +1,7 @@
 .section__content {
   @include outer-container;
-  padding: #{2 * $base-spacing} 0;
+  @include pad;
+  // padding: #{2 * $base-spacing} 0;
 }
 
 .section--full {
