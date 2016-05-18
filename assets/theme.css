@@ -293,6 +293,41 @@ nav {
 .snow-background {
   background-color: #FDFBFA; }
 
+.one-thirds {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  .one-thirds:last-child {
+    margin-right: 0; }
+
+.two-thirds {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%; }
+  .two-thirds:last-child {
+    margin-right: 0; }
+
+.five-sixths {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%; }
+  .five-sixths:last-child {
+    margin-right: 0; }
+
+.full {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  .full:last-child {
+    margin-right: 0; }
+
+.shift-one-sixths {
+  margin-left: 17.05961%; }
+
 .section--buy img {
   float: left;
   display: block;

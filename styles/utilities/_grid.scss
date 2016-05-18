@@ -1,0 +1,15 @@
+.one-thirds {
+  @include span-columns(4);
+}
+.two-thirds {
+  @include span-columns(8);
+}
+.five-sixths {
+  @include span-columns(10)
+}
+.full {
+  @include span-columns(12);
+}
+.shift-one-sixths {
+  @include shift(2);
+}
