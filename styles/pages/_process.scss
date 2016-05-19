@@ -1,0 +1,8 @@
+.process__number {
+  @include position(relative, null null null calc(100% - 100px));
+  width: 100px;
+
+  @include media($medium-screen) {
+    @include position(relative, null null null 50%);
+  }
+}

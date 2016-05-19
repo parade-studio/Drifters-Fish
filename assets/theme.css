@@ -373,8 +373,12 @@ section {
   background-color: #021D2C;
   color: #fff;
   text-align: center; }
-  .section--signature img {
-    width: 200px; }
+  .section--signature .logo {
+    margin-bottom: 30px;
+    width: 150px; }
+  .section--signature .signature {
+    max-width: 800px;
+    width: 90%; }
 
 .section--intro {
   text-align: center; }
@@ -554,3 +558,12 @@ section {
 .wave {
   margin-top: 7.07295%;
   width: 220px; }
+
+.process__number {
+  position: relative;
+  left: calc(100% - 100px);
+  width: 100px; }
+  @media screen and (min-width: 600px) {
+    .process__number {
+      position: relative;
+      left: 50%; } }

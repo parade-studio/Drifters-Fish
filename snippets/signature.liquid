@@ -1,6 +1,10 @@
 <section class="section--signature">
   <div class="section__content">
-    {{ 'df-logo-stacked-white.svg' | asset_url | img_tag: shop.name }}
-    <p class="bottom">Signature goes here</p>
+    <div class="full">
+      {{ 'df-logo-stacked-white.svg' | asset_url | img_tag: shop.name, 'logo' }}
+    </div>
+    <div class="full">
+      {{ 'signature2.svg' | asset_url | img_tag: 'Michael & Nelly Hand', 'signature' }}
+    </div>
   </div>
 </section>
