@@ -32,15 +32,37 @@ p {
   margin: 0 0 $small-spacing;
 }
 
+small {
+  color: $silver;
+  font-family: 'Simplon Mono';
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+p.round {
+  border: 2px solid $action-color;
+  border-radius: 100px;
+  display: inline-block;
+  color: $action-color;
+  height: 100px;
+  font-family: 'Simplon Mono';
+  text-align: center;
+  width: 100px;
+}
+
 a {
-  color: $white;
+  color: $action-color;
+  font-family: 'Simplon Mono';
+  font-weight: 200;
+  letter-spacing: 0.3em;
   text-decoration: none;
+  text-transform: uppercase;
   transition: color $base-duration $base-timing;
 
   &:active,
   &:focus,
   &:hover {
-    color: $action-color;
+    color: shade($action-color, 30%);
   }
 }
 
@@ -57,6 +79,9 @@ hr {
 }
 .text-left {
   text-align: left;
+}
+.text-right {
+  text-align: right;
 }
 .padded {
   padding: 3rem 0;

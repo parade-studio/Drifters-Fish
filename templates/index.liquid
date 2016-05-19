@@ -8,29 +8,54 @@
 
 <section class="section--video alabaster-background">
   <div class="section__content">
-    <img src="{{ 'video.png' | asset_url }}" alt="">
+    {{ 'video.png' | asset_url | img_tag }}
     <h2 class="bottom padded text-center">A husband and wife team bringing sustainably harvested salmon from the sea, to your table.</h2>
+  </div>
+  <div class="section__content section__link">
+    <a href="#">Full Screen</a>
   </div>
 </section>
 
 <section class="section--full section--hands">
   <div class="section__content">
     <div class="one-thirds">
-      <img src="{{ 'hands1.png' | asset_url }}" />
+      {{ 'hands1.png' | asset_url | img_tag }}
     </div>
     <div class="two-thirds">
       <div class="full">
         <h3 class="padded bottom text-left">Together, Nelly &amp; Michael now fish the beautiful Copper River and Prince William Sound on their 31-foot gill-netting boat called the Pelican.</h3>
       </div>
       <div class="five-sixths shift-one-sixths">
-        <img src="{{ 'hands2.png' | asset_url }}" />
+        {{ 'hands2.png' | asset_url | img_tag }}
       </div>
     </div>
+  </div>
+  <div class="section__content section__link">
+    <a href="/pages/about-us">Learn More</a>
   </div>
 </section>
 
 <section class="section--full solitude-background">
   <div class="section__content">
-    <h2>Information about purchasing fish goes here</h2>
+    <div class="full">
+      <div class="one-quarters text-left">
+        <small>WILD<br>ALASKAN<br>SOCKEYE<br>SALMON</small>
+      </div>
+      <div class="one-half text-left">
+        <h3>Drifters fish is frozen fresh. That might seem counter-intuitive. But it's the freshest it gets.</h3>
+      </div>
+      <div class="one-quarters text-right">
+        <p class="round" style="padding-top: 21px;">FROZEN FRESH</p>
+      </div>
+    </div>
+    <div class="full">
+      {{ 'fish2.png' | asset_url | img_tag }}
+    </div>
+    <div class="full">
+      {{ 'df-wave-large-three.svg' | asset_url | img_tag: null, 'wave' }}
+    </div>
+  </div>
+  <div class="section__content section__link">
+    <a href="/pages/buy">Order</a>
   </div>
 </section>

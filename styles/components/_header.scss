@@ -14,6 +14,13 @@ nav {
   transition: height $base-duration $base-timing;
 }
 
+nav a {
+  color: $white;
+  &:hover {
+    color: $action-color;
+  }
+}
+
 .nav__container {
   @include position(absolute, null null 0 null);
   border: 1px solid white;
@@ -23,4 +30,9 @@ nav {
 
 .nav__trigger {
   cursor: pointer;
+  padding: $base-spacing;
+
+  img {
+    width: 30px;
+  }
 }

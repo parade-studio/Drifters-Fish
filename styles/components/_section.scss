@@ -1,6 +1,10 @@
+section {
+  position: relative;
+}
+
 .section__content {
   @include outer-container;
-  @include pad;
+  @include pad(#{3 * flex-gutter()});
 }
 
 .section--full {
@@ -36,5 +40,43 @@
     display: inline-block;
     vertical-align: middle;
     width: 100%;
+  }
+}
+
+.section__link {
+  a {
+    @include pad;
+    border: 1px solid $action-color;
+    color: $action-color;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    &:hover {
+      background-color: $action-color;
+      color: $white;
+    }
+  }
+
+  @include media($medium-screen) {
+    @include position(absolute, 50% 0 null 0);
+    transform: translateY(-50%);
+
+    a {
+      @include position(absolute, null 1.5em null null);
+      background-color: transparent;
+      border-bottom: 1px solid currentColor;
+      border-width: 0 0 1px 0;
+      font-size: 0.75rem;
+      padding: 0;
+      transform: rotate(-90deg) translateX(60%);
+      transform-origin: right;
+      width: auto;
+
+      &:hover {
+        background-color: inherit;
+        color: inherit;
+      }
+    }
   }
 }

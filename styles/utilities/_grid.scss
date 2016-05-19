@@ -1,13 +1,37 @@
+.one-sixths {
+  @include span-columns(12);
+  @include media($medium-screen) {
+    @include span-columns(2);
+  }
+}
+.one-quarters {
+  @include span-columns(12);
+  @include media($medium-screen) {
+    @include span-columns(3);
+  }
+}
 .one-thirds {
   @include span-columns(12);
   @include media($medium-screen) {
     @include span-columns(4);
   }
 }
+.one-half {
+  @include span-columns(12);
+  @include media($medium-screen) {
+    @include span-columns(6);
+  }
+}
 .two-thirds {
   @include span-columns(12);
   @include media($medium-screen) {
     @include span-columns(8);
+  }
+}
+.three-quarters {
+  @include span-columns(12);
+  @include media($medium-screen) {
+    @include span-columns(9);
   }
 }
 .five-sixths {
@@ -23,5 +47,11 @@
   @include shift(0);
   @include media($medium-screen) {
     @include shift(2);
+  }
+}
+.shift-one-quarters {
+  @include shift(0);
+  @include media($medium-screen) {
+    @include shift(3);
   }
 }
