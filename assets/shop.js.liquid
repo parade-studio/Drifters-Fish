@@ -11,7 +11,7 @@ jQuery(function($) {
     }
   });
 
-  // Weather
+  // Status bar weather
   $.simpleWeather({
     location: 'Cordova, Alaska',
     unit: 'f',
@@ -26,7 +26,7 @@ jQuery(function($) {
     }
   });
 
-  // Time
+  // Status bar time
   var now = moment().tz('America/Vancouver').format('h:mma');
   $('.status-time').text(now);
 
