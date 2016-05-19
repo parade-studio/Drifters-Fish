@@ -1,8 +1,57 @@
-.process__number {
-  @include position(relative, null null null calc(100% - 100px));
-  width: 100px;
+#process {
+  section {
+    overflow: hidden;
+  }
 
-  @include media($medium-screen) {
-    @include position(relative, null null null 50%);
+  .process__number {
+    @include position(relative, null null null calc(100% - 100px));
+    width: 100px;
+
+    @include media($medium-screen) {
+      @include position(relative, null null null 50%);
+    }
+  }
+
+  .snow-background .process__location small {
+    background-color: $snow;
+  }
+
+  .process__location {
+    small {
+      @include pad;
+      background-color: $white;
+    }
+
+    .line {
+      display: none;
+    }
+
+    @include media($medium-screen) {
+      @include position(absolute, 50% 0 null 0);
+      transform: translateY(-50%);
+
+      .line {
+        @include position(absolute, 0 null null 2.2em);
+        border-bottom: 1px solid $silver;
+        display: block;
+        height: 0;
+        transform-origin: left;
+        width: 100%;
+
+        &.line--down {
+          transform: rotate(-90deg) translateX(-111%);
+        }
+        &.line--up {
+          transform: rotate(-90deg) translateX(-5%);
+        }
+      }
+
+      small {
+        @include position(absolute, null null null 3em);
+        padding: 0 10px;
+        transform: rotate(-90deg) translateX(-50%);
+        transform-origin: left;
+      }
+    }
   }
 }

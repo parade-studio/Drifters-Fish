@@ -16,6 +16,12 @@
     @include span-columns(4);
   }
 }
+.five-twelfths {
+  @include span-columns(12);
+  @include media($medium-screen) {
+    @include span-columns(5);
+  }
+}
 .one-half {
   @include span-columns(12);
   @include media($medium-screen) {
