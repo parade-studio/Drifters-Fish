@@ -16,9 +16,20 @@ nav {
 
 nav a {
   color: $white;
+  font-family: 'Simplon Mono';
   &:hover {
     color: $action-color;
   }
+}
+
+nav .logo {
+  margin: 2em 0;
+  width: 150px;
+}
+
+nav .seal {
+  @include position(absolute, -40px null null 50px)
+  width: 180px;
 }
 
 .nav__container {

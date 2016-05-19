@@ -264,9 +264,20 @@ nav {
   transition: height 150ms ease; }
 
 nav a {
-  color: #fff; }
+  color: #fff;
+  font-family: 'Simplon Mono'; }
   nav a:hover {
     color: #FC7523; }
+
+nav .logo {
+  margin: 2em 0;
+  width: 150px; }
+
+nav .seal {
+  position: absolute;
+  top: -40px;
+  left: 50px;
+  width: 180px; }
 
 .nav__container {
   position: absolute;
