@@ -1,8 +1,30 @@
-<footer>
+ <footer>
   {% include 'signature' %}
   <section class="section--status">
     <div class="section__content">
-      <p class="bottom">Status bar goes here</p>
+      <div class="one-thirds text-left desktop-only">
+        <p>
+          <small>STATUS</small><br />
+          <span>FISHING IN CORDOVA</span>
+        </p>
+      </div>
+      <div class="one-thirds text-center">
+        {{ 'df-logo-small.svg' | asset_url | img_tag: null, 'logo' }}
+      </div>
+      <div class="one-thirds text-right desktop-only">
+        <p class="wide-only-ib">
+          <small>TEMPERATURE</small><br />
+          <span>72</span>
+        </p>
+        <p>
+          <small>WEATHER</small><br />
+          <span>Raining</span>
+        </p>
+        <p class="wide-only-ib">
+          <small>TIME (PST)</small><br />
+          <span>10:35pm</span>
+        </p>
+      </div>
     </div>
   </section>
 </footer>

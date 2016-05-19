@@ -1,0 +1,16 @@
+.section--status {
+  .section__content {
+    padding-bottom: #{0.5 * flex-gutter()};
+    padding-top: #{0.5 * flex-gutter()};
+  }
+  p {
+    display: inline-block;
+  }
+  .text-right p {
+    margin-left: 20px;
+  }
+  .logo {
+    margin: 14px 0;
+    width: 25px;
+  }
+}

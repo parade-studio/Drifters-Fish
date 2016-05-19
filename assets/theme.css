@@ -384,6 +384,20 @@ section {
 .section--profile .profile__bio {
   font-size: 1.1875rem; }
 
+.section--status .section__content {
+  padding-bottom: 1.17883%;
+  padding-top: 1.17883%; }
+
+.section--status p {
+  display: inline-block; }
+
+.section--status .text-right p {
+  margin-left: 20px; }
+
+.section--status .logo {
+  margin: 14px 0;
+  width: 25px; }
+
 .alabaster-background {
   background-color: #FCFCFA; }
 
@@ -524,6 +538,18 @@ section {
   @media screen and (min-width: 600px) {
     .shift-one-quarters {
       margin-left: 25.58941%; } }
+
+.desktop-only {
+  display: none !important; }
+  @media screen and (min-width: 600px) {
+    .desktop-only {
+      display: block !important; } }
+
+.wide-only-ib {
+  display: none !important; }
+  @media screen and (min-width: 900px) {
+    .wide-only-ib {
+      display: inline-block !important; } }
 
 .wave {
   margin-top: 7.07295%;
