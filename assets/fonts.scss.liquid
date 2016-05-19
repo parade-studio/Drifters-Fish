@@ -23,3 +23,30 @@
        url('{{ "simplonmono-medium-webfont.ttf" | asset_url }}') format('truetype');
   font-weight: normal;
 }
+
+@keyframes animatedBackground {
+  from { background-position: 0px 0px; }
+  to { background-position: 53px 0px; }
+}
+@-moz-keyframes animatedBackground {
+  from { background-position: 0px 0px; }
+  to { background-position: 53px 0px; }
+}
+@-webkit-keyframes animatedBackground {
+  from { background-position: 0px 0px; }
+  to { background-position: 53px 0px; }
+}
+
+.loader__indicator {
+  background-image: url({{ 'df-wave-loader.svg' | asset_url }});
+  height: 50px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+
+  -webkit-animation: animatedBackground 1s linear infinite;
+  -moz-animation: animatedBackground 1s linear infinite;
+  animation: animatedBackground 1s linear infinite;
+}

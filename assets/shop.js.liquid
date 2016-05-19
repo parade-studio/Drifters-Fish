@@ -27,7 +27,15 @@ jQuery(function($) {
   });
 
   // Status bar time
-  var now = moment().tz('America/Vancouver').format('h:mma');
-  $('.status-time').text(now);
+  function updateTime() {
+    var now = moment().tz('America/Metlakatla').format('h:mma');
+    $('.status-time').text(now);
+  }
+  setInterval(updateTime, 10000);
+  updateTime();
 
+  // Loader
+  setTimeout(function() {
+    $('.loader').removeClass('loading');
+  }, 1500);
 });

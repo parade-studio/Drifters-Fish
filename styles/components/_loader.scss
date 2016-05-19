@@ -1,0 +1,13 @@
+.loader {
+  @include position(fixed, 0 0 0 0);
+  background-color: $brand-blue;
+  opacity: 0;
+  transition: all $base-duration $base-timing;
+  visibility: hidden;
+  z-index: 10;
+
+  &.loading {
+    opacity: 1;
+    visibility: visible;
+  }
+}
