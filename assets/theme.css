@@ -590,36 +590,42 @@ section {
 #process .snow-background .process__location small {
   background-color: #FDFBFA; }
 
-#process .process__location small {
-  padding: 2.35765%;
-  background-color: #fff; }
-
-#process .process__location .line {
+#process .process__location {
   display: none; }
-
-@media screen and (min-width: 600px) {
-  #process .process__location {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    left: 0;
-    transform: translateY(-50%); }
-    #process .process__location .line {
+  #process .process__location small {
+    padding: 2.35765%;
+    background-color: #fff; }
+  @media screen and (min-width: 600px) {
+    #process .process__location {
       position: absolute;
-      top: 0;
-      left: 2.2em;
-      border-bottom: 1px solid #BFBFBF;
+      top: 50%;
+      right: 0;
+      left: 0;
       display: block;
-      height: 0;
-      transform-origin: left;
-      width: 100%; }
-      #process .process__location .line.line--down {
-        transform: rotate(-90deg) translateX(-111%); }
-      #process .process__location .line.line--up {
-        transform: rotate(-90deg) translateX(-5%); }
-    #process .process__location small {
-      position: absolute;
-      left: 3em;
-      padding: 0 10px;
-      transform: rotate(-90deg) translateX(-50%);
-      transform-origin: left; } }
+      transform: translateY(-50%); }
+      #process .process__location .line {
+        position: absolute;
+        top: 0;
+        left: 2.2em;
+        border-bottom: 1px solid #BFBFBF;
+        height: 0;
+        transform-origin: left;
+        width: 100%; }
+        #process .process__location .line.line--down {
+          transform: rotate(-90deg) translateX(-107%); }
+        #process .process__location .line.line--up {
+          transform: rotate(-90deg) translateX(-7%); }
+      #process .process__location small {
+        position: absolute;
+        left: 3em;
+        padding: 0 10px;
+        transform: rotate(-90deg) translateX(-50%);
+        transform-origin: left; } }
+
+#process .section--attention {
+  border: 2px solid #FC7523;
+  border-width: 2px 0 2px 0;
+  color: #FC7523 !important; }
+
+#process small.mobile-only {
+  float: left; }

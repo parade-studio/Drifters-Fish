@@ -20,6 +20,7 @@
     <div class="full">
       <div class="one-half">
         <h3>Off Season</h3>
+        <small class="mobile-only">SEATTLE</small><br />
         {{ '01.svg' | asset_url | img_tag: '01', 'process__number' }}
       </div>
       <div class="one-half">
@@ -30,8 +31,8 @@
       <div class="one-half">
         {{ 'https://placehold.it/500x400' | img_tag }}
       </div>
-      <div class="one-quarters shift-one-quarters padded">
-        {{ 'https://placehold.it/250x300' | img_tag }}
+      <div class="one-quarters shift-one-quarters padded desktop-only">
+        {{ 'https://placehold.it/250x300' | img_tag: null }}
       </div>
     </div>
   </div>
@@ -46,6 +47,7 @@
     <div class="full">
       <div class="one-half">
         <h3>Equipment Prep</h3>
+        <small class="mobile-only">SEATTLE</small><br />
         {{ '02.svg' | asset_url | img_tag: '02', 'process__number' }}
       </div>
       <div class="one-half">
@@ -53,7 +55,7 @@
       </div>
     </div>
     <div class="full">
-      <div class="one-quarters padded">
+      <div class="one-quarters padded desktop-only">
         {{ 'https://placehold.it/250x300' | img_tag }}
       </div>
       <div class="one-half shift-one-quarters padded">
@@ -72,6 +74,7 @@
     <div class="full">
       <div class="one-half">
         <h3>Fishing</h3>
+        <small class="mobile-only">CORDOVA</small><br />
         {{ '03.svg' | asset_url | img_tag: '03', 'process__number' }}
       </div>
       <div class="one-half">
@@ -93,6 +96,7 @@
     <div class="full">
       <div class="one-half">
         <h3>Salmon Prep</h3>
+        <small class="mobile-only">CORDOVA</small><br />
         {{ '04.svg' | asset_url | img_tag: '04', 'process__number' }}
       </div>
       <div class="one-half">
@@ -100,13 +104,31 @@
       </div>
     </div>
     <div class="full">
-      <div class="one-quarters">
+      <div class="one-quarters desktop-only">
         {{ 'https://placehold.it/250x300' | img_tag }}
       </div>
       <div class="one-half shift-one-quarters padded">
         {{ 'https://placehold.it/500x400' | img_tag }}
       </div>
     </div>
+  </div>
+</section>
+
+<section class="section--attention">
+  <div class="section__content process__location">
+    <div class="line line--up"></div>
+    <div class="line line--down"></div>
+  </div>
+  <div class="section__content text-left">
+    <div class="one-half">
+      <h3 class="bottom">Attention!</h3>
+    </div>
+    <div class="one-half">
+      <p class="bottom">At this point, we have to cut off order taking for the 2016 season.</p>
+    </div>
+  </div>
+  <div class="section__content section__link">
+    <a href="/collections/shares">order</a>
   </div>
 </section>
 
@@ -119,6 +141,7 @@
     <div class="full">
       <div class="one-half">
         <h3>Delivering</h3>
+        <small class="mobile-only">SEATTLE</small><br />
         {{ '05.svg' | asset_url | img_tag: '05', 'process__number' }}
       </div>
       <div class="one-half">

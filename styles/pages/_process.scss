@@ -22,27 +22,25 @@
       background-color: $white;
     }
 
-    .line {
-      display: none;
-    }
+    display: none;
 
     @include media($medium-screen) {
       @include position(absolute, 50% 0 null 0);
+      display: block;
       transform: translateY(-50%);
 
       .line {
         @include position(absolute, 0 null null 2.2em);
         border-bottom: 1px solid $silver;
-        display: block;
         height: 0;
         transform-origin: left;
         width: 100%;
 
         &.line--down {
-          transform: rotate(-90deg) translateX(-111%);
+          transform: rotate(-90deg) translateX(-107%);
         }
         &.line--up {
-          transform: rotate(-90deg) translateX(-5%);
+          transform: rotate(-90deg) translateX(-7%);
         }
       }
 
@@ -53,5 +51,15 @@
         transform-origin: left;
       }
     }
+  }
+
+  .section--attention {
+    border: 2px solid $action-color;
+    border-width: 2px 0 2px 0;
+    color: $action-color !important;
+  }
+
+  small.mobile-only {
+    float: left;
   }
 }
