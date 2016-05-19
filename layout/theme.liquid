@@ -61,6 +61,9 @@
 
   {% include 'footer' %}
 
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
+  {{ 'moment.min.js' | asset_url | script_tag }}
+  {{ 'moment-timezone.min.js' | asset_url | script_tag }}
   {{ 'shop.js'  | asset_url | script_tag }}
 
 </body>

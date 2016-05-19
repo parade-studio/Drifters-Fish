@@ -1,4 +1,5 @@
 jQuery(function($) {
+  // Navigation trigger
   $('body').on('click', '.nav__trigger', function toggleNavigation(e) {
     var nav = $('nav');
     if (nav.hasClass('open')) {
@@ -9,4 +10,24 @@ jQuery(function($) {
       nav.toggleClass('open');
     }
   });
+
+  // Weather
+  $.simpleWeather({
+    location: 'Cordova, Alaska',
+    unit: 'f',
+    success: function(weather) {
+      $('.status-temperature').text(weather.temp);
+      $('.status-conditions').text(weather.currently);
+    },
+    error: function(error) {
+      console.log(error);
+      $('.status-temperature').parent().remove();
+      $('.status-conditions').parent().remove();
+    }
+  });
+
+  // Time
+  var now = moment().tz('America/Vancouver').format('h:mma');
+  $('.status-time').text(now);
+
 });

@@ -15,7 +15,7 @@ button, [type='button'], [type='reset'], [type='submit'] {
   line-height: 1;
   padding: 0.75em 1.5em;
   text-decoration: none;
-  transition: background-color 150ms ease;
+  transition: background-color 300ms ease-in-out;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -63,7 +63,7 @@ select[multiple] {
   box-sizing: border-box;
   margin-bottom: 0.75em;
   padding: 0.5em;
-  transition: border-color 150ms ease;
+  transition: border-color 300ms ease-in-out;
   width: 100%; }
   [type='color']:hover, [type='date']:hover, [type='datetime']:hover, [type='datetime-local']:hover, [type='email']:hover, [type='month']:hover, [type='number']:hover, [type='password']:hover, [type='search']:hover, [type='tel']:hover, [type='text']:hover, [type='time']:hover, [type='url']:hover, [type='week']:hover, input:not([type]):hover, textarea:hover,
   select[multiple]:hover {
@@ -214,7 +214,7 @@ a {
   letter-spacing: 0.3em;
   text-decoration: none;
   text-transform: uppercase;
-  transition: color 150ms ease; }
+  transition: color 300ms ease-in-out; }
   a:active, a:focus, a:hover {
     color: #b05219; }
 
@@ -261,7 +261,7 @@ nav {
   overflow: hidden;
   position: relative;
   text-align: center;
-  transition: height 150ms ease; }
+  transition: height 300ms ease-in-out; }
 
 nav a {
   color: #fff;

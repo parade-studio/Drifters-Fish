@@ -2,7 +2,9 @@
   <nav role="navigation">
     <div class="nav__container">
       {{ 'df-seal.svg' | asset_url | img_tag: null, 'seal' }}
-      {{ 'df-logo-straight-white.svg' | asset_url | img_tag: null, 'logo' }}
+      <a href="/">
+        {{ 'df-logo-straight-white.svg' | asset_url | img_tag: null, 'logo' }}
+      </a>
       <ul>
         {% for link in linklists.main-menu.links %}
         {% assign has_sub_menu = false %}
