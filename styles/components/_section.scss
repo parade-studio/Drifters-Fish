@@ -4,7 +4,27 @@ section {
 
 .section__content {
   @include outer-container;
-  @include pad(#{3 * flex-gutter()});
+  @include pad(#{2 * flex-gutter()});
+  padding-bottom: #{4 * flex-gutter()};
+  padding-top: #{2 * flex-gutter()};
+
+  @include media($medium-screen) {
+    padding-bottom: #{2 * flex-gutter()};
+    padding-top: #{1.5 * flex-gutter()};
+  }
+
+  &.no-padding-top {
+    padding-top: 0;
+  }
+
+  .full {
+    margin-bottom: #{1.5 * flex-gutter()};
+    position: relative;
+
+    h3 {
+      margin-top: #{1.5 * flex-gutter()};
+    }
+  }
 }
 
 .section--full {
@@ -49,6 +69,7 @@ section {
     border: 1px solid $action-color;
     color: $action-color;
     display: inline-block;
+    font-size: modular-scale(-2);
     text-align: center;
     text-decoration: none;
     width: 100%;
