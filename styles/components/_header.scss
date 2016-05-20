@@ -42,8 +42,13 @@ nav .seal {
 .nav__trigger {
   cursor: pointer;
   padding: $base-spacing;
+  float: right;
 
   img {
     width: 30px;
+  }
+
+  @include media($medium-screen) {
+    float: none;
   }
 }
