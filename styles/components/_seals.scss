@@ -2,8 +2,8 @@
 	.df-seal {
 		position: absolute;
 		right: $base-spacing;
-		top: $base-spacing*12;
-		width: 25%;
+		top: $base-spacing*9.5;
+		width: 30%;
 		z-index: 9;
 
 		@include media($medium-screen) {
