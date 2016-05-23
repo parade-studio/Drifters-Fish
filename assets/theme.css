@@ -447,19 +447,32 @@ section {
 .section--profile .profile__bio {
   font-size: 1.1875rem; }
 
-.section--status .section__content {
-  padding-bottom: 1.17883%;
-  padding-top: 1.17883%; }
+.section--status {
+  position: relative; }
+  .section--status .section__content {
+    padding-bottom: 1.17883%;
+    padding-top: 1.17883%; }
+  .section--status p {
+    display: inline-block; }
+  .section--status .text-right p {
+    margin-left: 20px; }
+  .section--status .logo {
+    margin: 14px 0;
+    width: 25px; }
 
-.section--status p {
-  display: inline-block; }
+.status__drawer {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  transition: height 300ms ease-in-out; }
 
-.section--status .text-right p {
-  margin-left: 20px; }
-
-.section--status .logo {
-  margin: 14px 0;
-  width: 25px; }
+.status__container {
+  position: absolute;
+  top: 0;
+  border: 1px solid white;
+  margin: 2.35765%;
+  text-align: center;
+  width: calc(100% - 4.7153%); }
 
 .video-wrapper {
   height: 0;

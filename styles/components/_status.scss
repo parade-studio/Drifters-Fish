@@ -1,4 +1,5 @@
 .section--status {
+  position: relative;
   .section__content {
     padding-bottom: #{0.5 * flex-gutter()};
     padding-top: #{0.5 * flex-gutter()};
@@ -13,4 +14,19 @@
     margin: 14px 0;
     width: 25px;
   }
+}
+
+.status__drawer {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  transition: height $base-duration $base-timing;
+}
+
+.status__container {
+  @include position(absolute, 0 null null null);
+  border: 1px solid white;
+  margin: flex-gutter();
+  text-align: center;
+  width: calc(100% - #{2 * flex-gutter()});
 }
