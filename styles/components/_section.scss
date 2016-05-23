@@ -4,7 +4,7 @@ section {
 
 .section__content {
   @include outer-container;
-  @include pad(#{2 * flex-gutter()});
+  @include pad(#{2.75 * flex-gutter()});
   padding-bottom: #{4.5 * flex-gutter()};
   padding-top: #{4 * flex-gutter()};
   position: relative;
@@ -94,7 +94,7 @@ section {
     transform: translateY(-50%);
 
     a {
-      @include position(absolute, null 1.5em null null);
+      @include position(absolute, null 2.75% null null);
       background-color: transparent;
       border-bottom: 1px solid currentColor;
       border-width: 0 0 1px 0;
@@ -108,6 +108,21 @@ section {
         background-color: inherit;
         color: inherit;
       }
+    }
+  }
+}
+
+.section__link__normal {
+  a {
+    border-bottom: 1px solid $action-color;
+    display: inline-block;
+    @include transition(all 0.2s ease);
+
+    &:hover {
+      background-color: inherit;
+      border-color: $brand-blue;
+      color: inherit;
+      @include transition(all 0.2s ease);
     }
   }
 }
