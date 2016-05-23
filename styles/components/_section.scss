@@ -5,12 +5,13 @@ section {
 .section__content {
   @include outer-container;
   @include pad(#{2 * flex-gutter()});
-  padding-bottom: #{4 * flex-gutter()};
-  padding-top: #{2 * flex-gutter()};
+  padding-bottom: #{4.5 * flex-gutter()};
+  padding-top: #{4 * flex-gutter()};
+  position: relative;
 
   @include media($medium-screen) {
     padding-bottom: #{2 * flex-gutter()};
-    padding-top: #{1.5 * flex-gutter()};
+    padding-top: #{1.75 * flex-gutter()};
   }
 
   &.no-padding-top {
@@ -18,21 +19,28 @@ section {
   }
 
   .full {
-    margin-bottom: #{1.5 * flex-gutter()};
+    margin-bottom: #{2 * flex-gutter()};
     position: relative;
 
     h3 {
       margin-top: #{1.5 * flex-gutter()};
+      @include media($medium-screen) {
+        margin-top: 0;
+      }
     }
   }
 }
 
 .section--full {
   height: 100%;
-  min-height: 100vh;
   position: relative;
-  &:before {
+
+  @include media($medium-screen) {
     min-height: 100vh;
+
+    &:before {
+      min-height: 100vh;
+    }
   }
 }
 
@@ -70,6 +78,7 @@ section {
     color: $action-color;
     display: inline-block;
     font-size: modular-scale(-2);
+    margin-top: 2em;
     text-align: center;
     text-decoration: none;
     width: 100%;
@@ -81,6 +90,7 @@ section {
 
   @include media($medium-screen) {
     @include position(absolute, 50% 0 null 0);
+    margin-top: 0;
     transform: translateY(-50%);
 
     a {
