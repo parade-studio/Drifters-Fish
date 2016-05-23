@@ -30,7 +30,7 @@
 
   .text-center {
     .logo {
-      margin: 14px 0;
+      margin: 20px 0;
       width: 25px;
     }
   }
@@ -45,12 +45,31 @@
   overflow: hidden;
   position: relative;
   transition: height $base-duration $base-timing;
+
+  small {
+    color: $brand-blue;
+  }
 }
 
 .status__container {
   @include position(absolute, 0 null null null);
-  border: 1px solid white;
-  margin: flex-gutter();
+  border: 2px solid $brand-orange;
+  margin: 0;
+  padding: flex-gutter();
+  padding-bottom: #{2.5 * flex-gutter()};
+  padding-top: #{2 * flex-gutter()};
   text-align: center;
-  width: calc(100% - #{2 * flex-gutter()});
+  width: 100%;
+
+  h1 {
+    margin-bottom: $base-spacing/7;
+  }
+
+  small {
+    font-size: modular-scale(-2);
+  }
+
+  .section__link__normal {
+    display: block;
+  }
 }
