@@ -3,12 +3,31 @@
     overflow: hidden;
   }
 
+  .section__content {
+    .full:last-child {
+      margin-bottom: 0;
+
+      .padded:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  h2 {
+    margin-bottom: 0.5rem;
+
+    @include media($medium-screen) {
+      margin-bottom: $small-spacing;
+    }
+  }
+
   .process__number {
-    @include position(relative, null null null calc(100% - 100px));
-    width: 100px;
+    @include position(absolute, 0.5rem null null calc(100% - 75px));
+    width: 75px;
 
     @include media($medium-screen) {
       @include position(relative, null null null 50%);
+      width: 120px;
     }
   }
 
@@ -45,12 +64,16 @@
       }
 
       small {
-        @include position(absolute, null null null 3em);
+        @include position(absolute, null null null 3.5em);
         padding: 0 10px;
         transform: rotate(-90deg) translateX(-50%);
         transform-origin: left;
       }
     }
+  }
+
+  .current__location {
+    border: 2px solid $action-color;
   }
 
   .section--attention {

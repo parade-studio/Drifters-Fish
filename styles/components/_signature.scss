@@ -1,15 +1,25 @@
 .section--signature {
-  background-color: $midnight;
-  color: $white;
-  text-align: center;
+  display: none;
+}
 
-  .logo {
-    margin-bottom: 30px;
-    width: 150px;
-  }
+#drifters-fish, #about-us {
+  .section--signature {
+    background-color: $midnight;
+    color: $white;
+    text-align: center;
 
-  .signature {
-    max-width: 800px;
-    width: 90%;
+    .section__content {
+      padding-bottom: 0;
+    }
+
+    .logo {
+      margin-bottom: 30px;
+      width: 150px;
+    }
+
+    .signature {
+      max-width: 800px;
+      width: 90%;
+    }
   }
 }

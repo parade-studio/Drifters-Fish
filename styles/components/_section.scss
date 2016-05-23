@@ -100,7 +100,7 @@ section {
       border-width: 0 0 1px 0;
       font-size: 0.75rem;
       padding: 0;
-      transform: rotate(-90deg) translateX(60%);
+      transform: rotate(90deg) translateX(60%);
       transform-origin: right;
       width: auto;
 
@@ -108,6 +108,23 @@ section {
         background-color: inherit;
         color: inherit;
       }
+    }
+  }
+}
+
+#process {
+  .section__content {
+
+    @include media($medium-screen) {
+      @include pad(#{2.5 * flex-gutter()});
+      padding-bottom: #{2 * flex-gutter()};
+      padding-top: #{1.75 * flex-gutter()};
+    }
+  }
+  .section--status {
+    .section__content {
+      padding-bottom: #{0.4 * flex-gutter()};
+      padding-top: #{0.5 * flex-gutter()};
     }
   }
 }

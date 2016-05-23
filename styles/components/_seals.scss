@@ -1,0 +1,16 @@
+#about-us {
+	.df-seal {
+		position: absolute;
+		right: $base-spacing;
+		top: $base-spacing*9.5;
+		width: 30%;
+		z-index: 9;
+
+		@include media($medium-screen) {
+			position: relative;
+			right: inherit;
+			top: inherit;
+			width: 20%;
+		}
+	}
+}

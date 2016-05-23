@@ -14,6 +14,11 @@ nav {
   transition: height $base-duration $base-timing;
 }
 
+.nav__links {
+  position: relative;
+  z-index: 10;
+}
+
 nav a {
   color: $white;
   font-family: 'Simplon Mono';
@@ -24,7 +29,9 @@ nav a {
 
 nav .logo {
   margin: 2em 0;
+  position: relative;
   width: 150px;
+  z-index: 10;
 }
 
 nav .seal {
@@ -46,6 +53,26 @@ nav .seal {
   }
 }
 
+.mobile__logo {
+  margin: 0 auto;
+  opacity: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -0.15rem;
+  width: 150px;
+  @include transition(opacity 0.25s ease);
+
+  @include media($medium-screen) {
+    display: none;
+  }
+}
+
+nav.open + p.mobile__logo {
+  opacity: 0;
+  @include transition(opacity 0.25s ease);
+}
+
 .nav__trigger {
   @include position(absolute, 0 0 null null);
 
@@ -55,7 +82,7 @@ nav .seal {
   z-index: 8;
 
   img {
-    width: 30px;
+    width: 25px;
   }
 
   @include media($medium-screen) {
