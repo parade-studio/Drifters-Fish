@@ -1,16 +1,36 @@
 .section--status {
   .section__content {
-    padding-bottom: #{0.5 * flex-gutter()};
+    padding-bottom: #{0.4 * flex-gutter()};
     padding-top: #{0.5 * flex-gutter()};
   }
+
+  small {
+    color: $brand-orange;
+    font-size: modular-scale(-3);
+  }
+
   p {
     display: inline-block;
   }
-  .text-right p {
-    margin-left: 20px;
+
+  .text-right {
+    p:nth-child(1) {
+      margin-left: 0;
+    }
+
+    p {
+      margin-left: $base-spacing * 1.2;
+
+      @include media($medium-screen) {
+        margin-left: $base-spacing * 1.5;
+      }
+    }
   }
-  .logo {
-    margin: 14px 0;
-    width: 25px;
+
+  .text-center {
+    .logo {
+      margin: 14px 0;
+      width: 25px;
+    }
   }
 }
