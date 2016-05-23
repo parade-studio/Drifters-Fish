@@ -16,6 +16,10 @@
   }
 }
 
+.status__trigger {
+  cursor: pointer;
+}
+
 .status__drawer {
   height: 0;
   overflow: hidden;

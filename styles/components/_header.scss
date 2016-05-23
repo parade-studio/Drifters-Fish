@@ -33,13 +33,22 @@ nav .seal {
 }
 
 .nav__container {
-  @include position(absolute, null null 0 null);
+  @include position(absolute, 0 null 0 null);
   border: 1px solid white;
+  height: calc(100vh - 3.5%);
   margin: flex-gutter();
+  top: 0;
   width: calc(100% - #{2 * flex-gutter()});
+
+  @include media($medium-screen) {
+    height: auto;
+    top: auto;
+  }
 }
 
 .nav__trigger {
+  @include position(absolute, 0 0 null null);
+
   cursor: pointer;
   padding: $base-spacing;
   float: right;
@@ -51,5 +60,6 @@ nav .seal {
 
   @include media($medium-screen) {
     float: none;
+    position: static;
   }
 }

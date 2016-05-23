@@ -313,12 +313,22 @@ nav .seal {
 
 .nav__container {
   position: absolute;
+  top: 0;
   bottom: 0;
   border: 1px solid white;
+  height: calc(100vh - 3.5%);
   margin: 2.35765%;
+  top: 0;
   width: calc(100% - 4.7153%); }
+  @media screen and (min-width: 600px) {
+    .nav__container {
+      height: auto;
+      top: auto; } }
 
 .nav__trigger {
+  position: absolute;
+  top: 0;
+  right: 0;
   cursor: pointer;
   padding: 1.5em;
   float: right;
@@ -327,7 +337,8 @@ nav .seal {
     width: 30px; }
   @media screen and (min-width: 600px) {
     .nav__trigger {
-      float: none; } }
+      float: none;
+      position: static; } }
 
 section {
   position: relative; }
@@ -459,6 +470,9 @@ section {
   .section--status .logo {
     margin: 14px 0;
     width: 25px; }
+
+.status__trigger {
+  cursor: pointer; }
 
 .status__drawer {
   height: 0;
