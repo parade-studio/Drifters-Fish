@@ -11,6 +11,21 @@ jQuery(function($) {
     }
   });
 
+  // Status drawer trigger
+  $('body').on('click', '.status__trigger', function toggleStatus(e) {
+    var status = $('.status__drawer');
+    if (status.hasClass('open')) {
+      status.css('height', 0);
+      status.toggleClass('open');
+    } else {
+      var currentScrollTop = $('document, body').scrollTop();
+      var outerHeight = status.find('.status__container').outerHeight(true);
+      status.css('height', outerHeight);
+      $('document, body').animate({ scrollTop: currentScrollTop + outerHeight + 'px' }, 300);
+      status.toggleClass('open');
+    }
+  })
+
   // Status bar weather
   $.simpleWeather({
     location: 'Cordova, Alaska',
