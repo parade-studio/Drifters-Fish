@@ -1,8 +1,15 @@
 .desktop-only {
-  display: none !important;
-  @include media($medium-screen) {
-    display: block !important;
-  }
+	display: none !important;
+  	@include media($medium-screen) {
+    	display: block !important;
+  	}
+}
+
+.mobile-only {
+	display: block !important;
+	@include media($medium-screen) {
+	  	display: none !important;
+	}
 }
 
 .wide-only-ib {
