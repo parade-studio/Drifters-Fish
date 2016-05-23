@@ -14,9 +14,9 @@ alabaster-background">
         <iframe src="https://player.vimeo.com/video/123800654?background=1&autoplay=1&api=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
     </div>
-  </div>
-  <div class="section__content section__link">
-    <a href="#">Full Screen</a>
+    <div class="section__link">
+      <a href="#">Full Screen</a>
+    </div>
   </div>
   <div class="section__content no-padding-top">
     <p class="text-center"><small>We're a community supported fishery</small></p>
@@ -26,6 +26,11 @@ alabaster-background">
 
 <section class="section--full section--hands">
   <div class="section__content">
+    <div class="full">
+      <div class="one-quarters text-left">
+        <small>Michael &amp; Nelly Hand</small>
+      </div>
+    </div>
     <div class="one-thirds">
       {{ 'hands1.png' | asset_url | img_tag }}
     </div>
@@ -33,7 +38,7 @@ alabaster-background">
       <div class="full">
         <h3 class="padded bottom text-left">Together, Nelly &amp; Michael now fish the beautiful Copper River and Prince William Sound on their 31-foot gill-netting boat called the Pelican.</h3>
       </div>
-      <div class="five-sixths shift-one-sixths">
+      <div class="five-sixths shift-one-sixths desktop-only">
         {{ 'hands2.png' | asset_url | img_tag }}
       </div>
     </div>
@@ -62,8 +67,8 @@ alabaster-background">
     <div class="full">
       {{ 'df-wave-large-three.svg' | asset_url | img_tag: null, 'wave' }}
     </div>
-  </div>
-  <div class="section__content section__link">
+    <div class="section__link">
     <a href="/pages/buy">Order</a>
+  </div>
   </div>
 </section>
