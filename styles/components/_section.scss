@@ -78,7 +78,6 @@ section {
     color: $action-color;
     display: inline-block;
     font-size: modular-scale(-2);
-    margin-top: 2em;
     text-align: center;
     text-decoration: none;
     width: 100%;
@@ -113,6 +112,7 @@ section {
 }
 
 .section__link__normal {
+
   a {
     border-bottom: 1px solid $action-color;
     display: inline-block;
