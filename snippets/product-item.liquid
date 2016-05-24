@@ -1,11 +1,9 @@
-<div class="one-thirds {% unless product.available %} sold-out{% endunless %} text-center">
-  <a href="{{ product.url | within: collection }}">
-    <img src="{{ product | img_url: 'grande' }}" alt="{{ product.featured_image.alt | escape }}" />
-  </a>
-
-  <p>
-    <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
-    <br/>
-    <small>{% if product.price_varies %}From {% endif %}{{ product.price | money }}</small>
-  </p>
+<div class="one-thirds product--container{% unless product.available %} sold-out{% endunless %}">
+	<p class="product--details {{ product.title | downcase }}">
+		<small>{% if product.price_varies %}From {% endif %}{{ product.price | money }}</small>
+	  	<a href="{{ product.url | within: collection }}">{{ product.title }}</a>
+	</p>
+  	<a href="{{ product.url | within: collection }}">
+    	<img class="product--image" src="{{ product | img_url: 'grande' }}" alt="{{ product.featured_image.alt | escape }}" />
+  	</a>
 </div>
