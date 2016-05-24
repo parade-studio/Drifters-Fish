@@ -236,6 +236,7 @@ p.round {
   z-index: 5; }
   p.round span {
     display: table-cell;
+    padding-top: 5px;
     vertical-align: middle; }
 
 a {
@@ -377,10 +378,10 @@ section {
   position: relative; }
 
 .section__content {
-  max-width: 1250px;
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
-  padding: 4.7153%;
+  padding: 6.48354%;
   padding-bottom: 10.60943%;
   padding-top: 9.43061%;
   position: relative; }
@@ -459,7 +460,7 @@ section {
     transform: translateY(-50%); }
     .section__link a {
       position: absolute;
-      right: 1.5em;
+      right: 2.75%;
       background-color: transparent;
       border-bottom: 1px solid currentColor;
       border-width: 0 0 1px 0;
@@ -471,6 +472,18 @@ section {
       .section__link a:hover {
         background-color: inherit;
         color: inherit; } }
+
+.section__link__normal a {
+  border-bottom: 1px solid #FC7523;
+  display: inline-block;
+  -spec-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+  .section__link__normal a:hover {
+    background-color: inherit;
+    border-color: #0A5593;
+    color: inherit;
+    -spec-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
 
 @media screen and (min-width: 600px) {
   #process .section__content {
@@ -524,7 +537,7 @@ section {
       .section--status .text-right p {
         margin-left: 2.325em; } }
   .section--status .text-center .logo {
-    margin: 14px 0;
+    margin: 20px 0;
     width: 25px; }
 
 .status__trigger {
@@ -535,14 +548,25 @@ section {
   overflow: hidden;
   position: relative;
   transition: height 300ms ease-in-out; }
+  .status__drawer small {
+    color: #0A5593; }
 
 .status__container {
   position: absolute;
   top: 0;
-  border: 1px solid white;
-  margin: 2.35765%;
+  border: 2px solid #FC7523;
+  margin: 0;
+  padding: 2.35765%;
+  padding-bottom: 5.89413%;
+  padding-top: 4.7153%;
   text-align: center;
-  width: calc(100% - 4.7153%); }
+  width: 100%; }
+  .status__container h1 {
+    margin-bottom: 0.22143em; }
+  .status__container small {
+    font-size: 0.64em; }
+  .status__container .section__link__normal {
+    display: block; }
 
 .video-wrapper {
   height: 0;
