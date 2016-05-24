@@ -30,8 +30,13 @@
 
   .text-center {
     .logo {
-      margin: 20px 0;
-      width: 25px;
+      padding: 20px 0;
+      vertical-align: middle;
+      width: 20px;
+
+      @include media($medium-screen) {
+        width: 25px;
+      }
     }
   }
 }
