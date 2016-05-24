@@ -722,7 +722,11 @@ section {
     text-align: left; }
     .product--container .product--details a {
       color: #0A5593;
-      font-size: 1.25em; }
+      font-size: 1.25em;
+      font-weight: 400; }
+      @media screen and (min-width: 600px) {
+        .product--container .product--details a {
+          font-size: 1em; } }
     .product--container .product--details small {
       color: #FC7523; }
     .product--container .product--details.five {
