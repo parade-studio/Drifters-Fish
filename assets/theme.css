@@ -519,6 +519,21 @@ section {
 .section--profile .profile__bio {
   font-size: 1.1875rem; }
 
+html {
+  height: 100%; }
+
+body {
+  padding-bottom: 98px;
+  position: relative;
+  min-height: 100%;
+  transition: padding-bottom 300ms ease-in-out; }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  background-color: #fff;
+  width: 100%; }
+
 .section--status {
   position: relative; }
   .section--status .section__content {

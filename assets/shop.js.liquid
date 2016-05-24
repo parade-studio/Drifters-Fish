@@ -12,16 +12,22 @@ jQuery(function($) {
   });
 
   // Status drawer trigger
+  $('body').css('padding-bottom', $('.status__trigger').outerHeight(true));
   $('body').on('click', '.status__trigger', function toggleStatus(e) {
     var status = $('.status__drawer');
+    var triggerHeight = $('.status__trigger').outerHeight(true);
     if (status.hasClass('open')) {
       status.css('height', 0);
       status.toggleClass('open');
+      $('body').css('padding-bottom', triggerHeight + 'px');
     } else {
       var currentScrollTop = $('document, body').scrollTop();
-      var outerHeight = status.find('.status__container').outerHeight(true);
-      status.css('height', outerHeight);
-      $('document, body').animate({ scrollTop: currentScrollTop + outerHeight + 'px' }, 300);
+      var containerHeight = status.find('.status__container').outerHeight(true);
+      status.css('height', containerHeight);
+      $('document, body').animate({
+        scrollTop: currentScrollTop + containerHeight + 'px'
+      }, 300);
+      $('body').css('padding-bottom', containerHeight + triggerHeight + 'px');
       status.toggleClass('open');
     }
   })
