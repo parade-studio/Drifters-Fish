@@ -1,0 +1,60 @@
+#shares {
+	.section--full {
+		min-height: auto;
+
+		&:before {
+			display: none;
+		}
+	}
+}
+
+.product--container {
+	margin-bottom: $base-spacing;
+	padding: 0;
+
+	@include media($medium-screen) {
+		padding: $base-spacing;
+	}
+
+	.product--details {
+		text-align: left;
+
+		a {
+			color: $brand-blue;
+			font-size: modular-scale(1);
+		}
+
+		small {
+			color: $brand-orange;
+		}
+
+		&.five {
+			background: transparent url("05.svg") no-repeat 100% 70%;
+			background-size: auto 40px;
+		}
+
+		&.ten {
+			background: transparent url("10.svg") no-repeat 100% 70%;
+			background-size: auto 40px;
+		}
+
+		&.twenty {
+			background: transparent url("20.svg") no-repeat 100% 70%;
+			background-size: auto 40px;
+
+		}
+	}
+
+	a {
+		display: block;
+		font-family: $base-font-family;
+		letter-spacing: 0.1rem;
+		text-align: left;
+		text-transform: capitalize;
+
+		.product--image {
+			width: 100%;
+		}
+	}
+  
+}
