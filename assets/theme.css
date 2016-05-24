@@ -307,6 +307,75 @@ nav {
 .nav__links {
   position: relative;
   z-index: 10; }
+  .nav__links a {
+    color: transparent;
+    display: inline-block;
+    margin: 0.8rem auto;
+    opacity: 1;
+    width: 280px;
+    -spec-transition: opacity 0.25s ease;
+    transition: opacity 0.25s ease; }
+    @media screen and (min-width: 600px) {
+      .nav__links a {
+        margin: 1rem auto;
+        width: 350px; } }
+    .nav__links a:hover {
+      color: transparent;
+      opacity: 0.7;
+      -spec-transition: opacity 0.25s ease;
+      transition: opacity 0.25s ease; }
+    .nav__links a.process {
+      background: transparent url("df-nav-process.svg") no-repeat 50% 50%;
+      background-size: auto 15px; }
+      @media screen and (min-width: 600px) {
+        .nav__links a.process {
+          background-size: auto 20px; } }
+    .nav__links a.about {
+      background: transparent url("df-nav-about.svg") no-repeat 50% 50%;
+      background-size: auto 15px; }
+      @media screen and (min-width: 600px) {
+        .nav__links a.about {
+          background-size: auto 20px; } }
+    .nav__links a.contact {
+      background: transparent url("df-nav-contact.svg") no-repeat 50% 50%;
+      background-size: auto 15px;
+      margin-bottom: 4rem; }
+      @media screen and (min-width: 600px) {
+        .nav__links a.contact {
+          background-size: auto 20px;
+          margin-bottom: 3.2rem; } }
+    .nav__links a.order {
+      background: transparent url("df-nav-order-salmon.svg") no-repeat 50% 50%;
+      background-size: auto 15px;
+      margin: 2.5rem auto; }
+      @media screen and (min-width: 600px) {
+        .nav__links a.order {
+          background-size: auto 20px;
+          margin: 2.2rem auto; } }
+  .nav__links .last {
+    border-bottom: 1px solid #BFBFBF;
+    border-top: 1px solid #BFBFBF;
+    position: relative; }
+    .nav__links .last::before {
+      position: absolute;
+      top: -42px;
+      right: 0;
+      left: 0;
+      background: #0A5593 url("df-cordova-stamp-01.svg") no-repeat 50% 50%/85%;
+      content: '';
+      height: 60px;
+      margin: auto;
+      padding: 1rem;
+      width: 200px; }
+      @media screen and (min-width: 600px) {
+        .nav__links .last::before {
+          position: absolute;
+          top: -52%;
+          left: 45px;
+          height: 80px;
+          margin: 0;
+          padding: 1rem;
+          width: 220px; } }
 
 nav a {
   color: #fff;
@@ -315,30 +384,42 @@ nav a {
     color: #FC7523; }
 
 nav .logo {
-  margin: 2em 0;
+  margin: 1.25rem auto;
   position: relative;
-  width: 150px;
+  width: 125px;
   z-index: 10; }
+  @media screen and (min-width: 600px) {
+    nav .logo {
+      margin: 1.5em auto; } }
 
 nav .seal {
   position: absolute;
-  top: -40px;
-  left: 50px;
-  width: 180px; }
+  right: 0;
+  bottom: 14%;
+  left: 0;
+  margin: auto;
+  width: 90px; }
+  @media screen and (min-width: 600px) {
+    nav .seal {
+      position: absolute;
+      top: -50px;
+      left: 65px;
+      margin: 0;
+      width: 180px; } }
 
 .nav__container {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  border: 1px solid white;
+  border: 1px solid #BFBFBF;
   height: calc(100vh - 3.5%);
-  margin: 2.35765%;
+  margin: 0.75rem;
   top: 0;
-  width: calc(100% - 4.7153%); }
+  width: calc(100% - 1.5rem); }
   @media screen and (min-width: 600px) {
     .nav__container {
       height: auto;
-      top: auto; } }
+      margin: 1rem;
+      top: auto;
+      width: calc(100% - 2rem); } }
 
 .mobile__logo {
   margin: 0 auto;
@@ -346,8 +427,8 @@ nav .seal {
   position: absolute;
   left: 0;
   right: 0;
-  top: -0.15rem;
-  width: 150px;
+  top: 5px;
+  width: 125px;
   -spec-transition: opacity 0.25s ease;
   transition: opacity 0.25s ease; }
   @media screen and (min-width: 600px) {
@@ -442,7 +523,6 @@ section {
   color: #FC7523;
   display: inline-block;
   font-size: 0.64em;
-  margin-top: 2em;
   text-align: center;
   text-decoration: none;
   width: 100%; }
