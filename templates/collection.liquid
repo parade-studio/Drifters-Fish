@@ -1,15 +1,17 @@
 <section>
+  <div class="section__content page__title">
+    <small>{{ collection.title }}</small>
+  </div>
   <div class="section__content">
     <div class="full">
-      <h2>{{ collection.title }}</h2>
       {% if collection.description.size > 0 %}
-        <p>{{ collection.description }}</p>
+        <h2>{{ collection.description }}</h2>
       {% endif %}
     </div>
   </div>
 </section>
 
-<section>
+<section class="section--full alabaster-background">
   <div class="section__content">
     {% for product in collection.products %}
       {% include 'product-item' %}
