@@ -1,3 +1,14 @@
+.section--hands {
+	.section__link {
+		margin-top: 0;
+
+	 	@include media($medium-screen) {
+			float: none;
+			margin-top: 0;
+		}
+	}
+}
+
 .wave {
   margin-top: #{3 * flex-gutter()};
   width: 220px;

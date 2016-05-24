@@ -28,6 +28,10 @@ section {
         margin-top: 0;
       }
     }
+
+    div:first-child {
+      margin-bottom: $base-spacing/2;
+    }
   }
 }
 
@@ -72,13 +76,23 @@ section {
 }
 
 .section__link {
+  float: left;
+  display: block;
+  margin-top: $base-spacing;
+  width: 100%;
+
+  @include media($medium-screen) {
+    float: none;
+    margin-top: 0;
+    width: auto;
+  }
+
   a {
-    @include pad;
     border: 1px solid $action-color;
     color: $action-color;
     display: inline-block;
-    font-size: modular-scale(-2);
-    margin-top: 2em;
+    font-size: modular-scale(-3);
+    padding: $base-spacing/1.5;
     text-align: center;
     text-decoration: none;
     width: 100%;
@@ -90,6 +104,7 @@ section {
 
   @include media($medium-screen) {
     @include position(absolute, 50% 0 null 0);
+    font-size: modular-scale(-2);
     margin-top: 0;
     transform: translateY(-50%);
 
@@ -123,23 +138,6 @@ section {
       border-color: $brand-blue;
       color: inherit;
       @include transition(all 0.2s ease);
-    }
-  }
-}
-
-#process {
-  .section__content {
-
-    @include media($medium-screen) {
-      @include pad(#{2.5 * flex-gutter()});
-      padding-bottom: #{2 * flex-gutter()};
-      padding-top: #{1.75 * flex-gutter()};
-    }
-  }
-  .section--status {
-    .section__content {
-      padding-bottom: #{0.4 * flex-gutter()};
-      padding-top: #{0.5 * flex-gutter()};
     }
   }
 }

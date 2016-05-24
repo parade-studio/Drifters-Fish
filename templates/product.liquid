@@ -8,8 +8,7 @@
   <meta itemprop="image" content="{{ product | img_url: 'grande' }}" />
 
   <div class="section__content">
-    <form action="/cart/add" method="post" enctype="multipart/form-data">
-
+    <div class="one-half">
       {% if product.images.size == 0 %}
 
         <img src="{{ '' | img_url: 'grande' }}" alt="" />
@@ -34,65 +33,68 @@
         {% endif %}
 
       {% endif %}
+    </div>
+    <div class="one-half">
+      <form action="/cart/add" method="post" enctype="multipart/form-data">
+          <h1>{{ product.title }}</h1>
 
-        <h1>{{ product.title }}</h1>
-
-        <div itemprop="description">
-          {{ product.description }}
-        </div>
-
-        <div id="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-          <meta itemprop="priceCurrency" content="{{ shop.currency }}" />
-          {% if product.available %}
-          <link itemprop="availability" href="http://schema.org/InStock" />
-          {% else %}
-          <link itemprop="availability" href="http://schema.org/OutOfStock" />
-          {% endif %}
-          <p>
-            {% assign variant = product.selected_or_first_available_variant %}
-            <span class="product-price" itemprop="price">{{ variant.price | money }}</span>
-          </p>
-        </div>
-
-        {% assign hide_default_title = false %}
-        {% if product.variants.size == 1 and product.variants.first.title contains 'Default' %}
-          {% assign hide_default_title = true %}
-        {% endif %}
-
-        <div id="product-variants" class="{% if hide_default_title %} hidden{% endif %}">
-          <select id="product-select" name="id">
-          {% for variant in product.variants %}
-            <option{% if variant == product.selected_or_first_available_variant %} selected{% endif %} value="{{ variant.id }}">
-            {{ variant.title }} - {{ variant.price | money }}
-            </option>
-          {% endfor %}
-          </select>
-        </div>
-
-        <div id="backorder" class="hidden">
-          <p>{{ '%s is back-ordered. We will ship it separately in 10 to 15 days.' | replace: '%s', '<span id="selected-variant"></span>' }}</p>
-        </div>
-
-        <div id="product-add">
-          <input type="submit" name="add" id="add" value="{{ add_to_cart | escape }}">
-        </div>
-
-        {% if collection %}
-          {% if collection.previous_product or collection.next_product %}
-          <div>
-          {% if collection.previous_product %}
-            {% capture prev_url %}{{ collection.previous_product}}#content{% endcapture %}
-            <span class="left">{{ 'Previous Product' | link_to: prev_url }}</span>
-          {% endif %}
-          {% if collection.next_product %}
-            {% capture next_url %}{{ collection.next_product}}#content{% endcapture %}
-            <span class="right">{{ 'Next Product' | link_to: next_url }}</span>
-          {% endif %}
+          <div itemprop="description">
+            {{ product.description }}
           </div>
-          {% endif %}
-        {% endif %}
 
-    </form>
+          <div id="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <meta itemprop="priceCurrency" content="{{ shop.currency }}" />
+            {% if product.available %}
+            <link itemprop="availability" href="http://schema.org/InStock" />
+            {% else %}
+            <link itemprop="availability" href="http://schema.org/OutOfStock" />
+            {% endif %}
+            <p>
+              {% assign variant = product.selected_or_first_available_variant %}
+              <span class="product-price" itemprop="price">{{ variant.price | money }}</span>
+            </p>
+          </div>
+
+          {% assign hide_default_title = false %}
+          {% if product.variants.size == 1 and product.variants.first.title contains 'Default' %}
+            {% assign hide_default_title = true %}
+          {% endif %}
+
+          <div id="product-variants" class="{% if hide_default_title %} hidden{% endif %}">
+            <select id="product-select" name="id">
+            {% for variant in product.variants %}
+              <option{% if variant == product.selected_or_first_available_variant %} selected{% endif %} value="{{ variant.id }}">
+              {{ variant.title }} - {{ variant.price | money }}
+              </option>
+            {% endfor %}
+            </select>
+          </div>
+
+          <div id="backorder" class="hidden">
+            <p>{{ '%s is back-ordered. We will ship it separately in 10 to 15 days.' | replace: '%s', '<span id="selected-variant"></span>' }}</p>
+          </div>
+
+          <div id="product-add">
+            <input type="submit" name="add" id="add" value="{{ add_to_cart | escape }}">
+          </div>
+
+          {% if collection %}
+            {% if collection.previous_product or collection.next_product %}
+            <div>
+            {% if collection.previous_product %}
+              {% capture prev_url %}{{ collection.previous_product}}#content{% endcapture %}
+              <span class="left">{{ 'Previous Product' | link_to: prev_url }}</span>
+            {% endif %}
+            {% if collection.next_product %}
+              {% capture next_url %}{{ collection.next_product}}#content{% endcapture %}
+              <span class="right">{{ 'Next Product' | link_to: next_url }}</span>
+            {% endif %}
+            </div>
+            {% endif %}
+          {% endif %}
+
+      </form>
+    </div>
   </div>
 </section>
 
