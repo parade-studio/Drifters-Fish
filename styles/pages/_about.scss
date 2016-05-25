@@ -1,10 +1,18 @@
 #about-us {
 	h2 {
 		margin-top: $base-spacing/2;
+
+		@include media($medium-screen) {
+			margin-top: 0;
+		}
 	}	
 
 	.section__link {
 	  margin-top: $base-spacing/2;
+
+	  @include media($medium-screen) {
+	  	margin-top: 0;
+	  }
 	}
 
 	.full {
