@@ -2,13 +2,13 @@
 {% assign sold_out = 'Sold Out' %}
 {% assign unavailable = 'Unavailable' %}
 
-<section itemscope itemtype="http://schema.org/Product">
+<section class="product--page" itemscope itemtype="http://schema.org/Product">
 
   <meta itemprop="url" content="{{ shop.url }}{{ product.url }}" />
   <meta itemprop="image" content="{{ product | img_url: 'grande' }}" />
 
   <div class="section__content">
-    <div class="one-half">
+    <div class="one-half product--image">
       {% if product.images.size == 0 %}
 
         <img src="{{ '' | img_url: 'grande' }}" alt="" />
@@ -34,9 +34,9 @@
 
       {% endif %}
     </div>
-    <div class="one-half">
+    <div class="one-half product--details">
       <form action="/cart/add" method="post" enctype="multipart/form-data">
-          <h1>{{ product.title }}</h1>
+          <h2>{{ product.title }}</h2>
 
           <div itemprop="description">
             {{ product.description }}
@@ -78,19 +78,8 @@
             <input type="submit" name="add" id="add" value="{{ add_to_cart | escape }}">
           </div>
 
-          {% if collection %}
-            {% if collection.previous_product or collection.next_product %}
-            <div>
-            {% if collection.previous_product %}
-              {% capture prev_url %}{{ collection.previous_product}}#content{% endcapture %}
-              <span class="left">{{ 'Previous Product' | link_to: prev_url }}</span>
-            {% endif %}
-            {% if collection.next_product %}
-              {% capture next_url %}{{ collection.next_product}}#content{% endcapture %}
-              <span class="right">{{ 'Next Product' | link_to: next_url }}</span>
-            {% endif %}
-            </div>
-            {% endif %}
+          {% if collection %}            
+            <a href="{{ collection.url }}" title="Back to the {{ collection.title }} collection page" class="secondary-link">&#8592; Back to Shares</a>
           {% endif %}
 
       </form>
