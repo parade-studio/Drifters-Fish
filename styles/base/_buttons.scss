@@ -1,27 +1,36 @@
 #{$all-buttons} {
   appearance: none;
-  background-color: $action-color;
-  border: 0;
-  border-radius: $base-border-radius;
-  color: #fff;
+  background-color: transparent;
+  border: 1px solid $action-color;
+  border-radius: 0;
+  color: $action-color;
   cursor: pointer;
   display: inline-block;
-  font-family: $base-font-family;
-  font-size: $base-font-size;
+  font-family: $secondary-font-family;
+  font-size: modular-scale(-2, 1.1em);
   -webkit-font-smoothing: antialiased;
-  font-weight: 600;
-  line-height: 1;
-  padding: $small-spacing $base-spacing;
+  font-weight: 500;
+  letter-spacing: 0.25rem;
+  min-width: 250px;
+  padding: $base-spacing/1.2;
   text-decoration: none;
-  transition: background-color $base-duration $base-timing;
+  text-transform: uppercase;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
+  @include transition(all 0.2s ease);
+
+  @include media($medium-screen) {
+    font-size: modular-scale(-2);
+    padding: $base-spacing/1.8;
+
+  }
 
   &:hover,
   &:focus {
-    background-color: shade($action-color, 20%);
-    color: #fff;
+    background-color: $action-color;
+    color: $white;
+    @include transition(all 0.2s ease);
   }
 
   &:disabled {
