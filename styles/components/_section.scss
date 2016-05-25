@@ -96,9 +96,12 @@ section {
     text-align: center;
     text-decoration: none;
     width: 100%;
+    @include transition(all 0.2s ease);
+
     &:hover {
       background-color: $action-color;
       color: $white;
+      @include transition(all 0.2s ease);
     }
   }
 
@@ -115,13 +118,15 @@ section {
       border-width: 0 0 1px 0;
       font-size: 0.75rem;
       padding: 0;
-      transform: rotate(90deg) translateX(60%);
+      transform: rotate(90deg) translateX(50%);
       transform-origin: right;
       width: auto;
+      @include transition(all 0.2s ease);
 
       &:hover {
         background-color: inherit;
-        color: inherit;
+        color: $brand-blue;
+        @include transition(all 0.2s ease);
       }
     }
   }
@@ -131,6 +136,7 @@ section {
   a {
     border-bottom: 1px solid $action-color;
     display: inline-block;
+    letter-spacing: 0.25rem;
     @include transition(all 0.2s ease);
 
     &:hover {
@@ -139,5 +145,23 @@ section {
       color: inherit;
       @include transition(all 0.2s ease);
     }
+  }
+}
+
+.secondary-link {
+  color: $silver;
+  display: block;
+  font-family: $secondary-font-family;
+  font-size: modular-scale(-3, 1.3rem);
+  letter-spacing: 0.25rem;
+  margin-top: $base-spacing/2;
+  text-align: center;
+
+  @include media($medium-screen) {
+    text-align: left;
+  }
+
+  &:hover {
+    color: darken($silver, 10%);
   }
 }
