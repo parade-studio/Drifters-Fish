@@ -80,6 +80,10 @@ nav {
     border-top: 1px solid $silver;
     position:relative;
 
+    @include media($medium-screen) {
+      border-bottom: none;
+    }
+
     &::before {
       @include position(absolute, -42px 0 null 0)
       background: $brand-blue url("df-cordova-stamp-01.svg") no-repeat 50% 50% / 85%;
