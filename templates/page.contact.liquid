@@ -1,0 +1,44 @@
+{% comment %}
+  Very important reading:
+  http://docs.shopify.com/themes/liquid-basics/what-is-true-and-false-in-liquid
+  Learn how to read theme settings in your theme.
+{% endcomment %}
+<section>
+  <div class="section__content page__title">
+    <small>Contact Us</small>
+  </div>
+  <div class="section__content">
+    <div>
+      <h2>Get in touch</h2>
+      <div class="two-thirds">
+        <img src="{{ 'fish1.png' | asset_url }}" alt="Fish" />
+      </div>
+      <div class="one-thirds">
+        <p>Please contact us if you have any questions.</p>
+        <small>Email</small>
+        <p><a href="mailto:info@driftersfish.com">info@driftersfish.com</a></p>
+        <small>Telephone</small>
+        <p><a class="no-border-bottom">907.317.2958</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section--full-width snow-background">
+  <div class="section__content">
+    <div>
+      <h2>Wholesale Inqueries</h2>
+      <div class="two-thirds">
+        <img src="{{ 'fish1.png' | asset_url }}" alt="Fish" />
+      </div>
+      <div class="one-thirds">
+        <p>Our fish is available fresh or frozen to your market or restaurant. We would love to work with you to give your customers a direct relationship to the fish on their plate.</p>
+        <form>
+          <input type="text" placeholder="Name">
+          <input type="email" placeholder="Email">
+          <input type="text-area" placeholder="Message">
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
