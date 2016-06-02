@@ -2,7 +2,6 @@ body {
   color: $base-font-color;
   font-family: $base-font-family;
   font-size: $base-font-size;
-  line-height: $base-line-height;
 }
 
 h1,
@@ -15,7 +14,7 @@ h6 {
   font-size: modular-scale(1);
   font-weight: 200;
   line-height: $heading-line-height;
-  margin: 0 0 $small-spacing;
+  margin: 0 0 #{1.75 * flex-gutter()/2.8};
 }
 
 h1 {
@@ -42,6 +41,14 @@ h3 {
   }
 }
 
+h4 {
+  font-size: modular-scale(-1);
+
+  @include media($medium-screen) {
+    font-size: modular-scale(1);
+  }
+}
+
 p {
   font-size: modular-scale(-1);
   font-weight: 100;
@@ -51,14 +58,45 @@ p {
   @include media($medium-screen) {
     font-size: modular-scale(0);
   }
+
+  a {
+    border-bottom: 1px solid currentColor;
+    font-size: modular-scale(-1);
+
+    @include media($medium-screen) {
+      font-size: modular-scale(-2);
+    }
+
+    &.no-border-bottom {
+      border-bottom: none;
+
+      &:hover {
+        color: $brand-orange;
+      }
+    }
+  }
 }
 
 small {
   color: $silver;
+  display: block;
   font-family: 'Simplon Mono';
-  font-size: modular-scale(-2);
+  font-size: modular-scale(-2, 1.1rem);
   letter-spacing: 0.15rem;
+  line-height: 1.7;
   text-transform: uppercase;
+
+  &.metadata {
+    @include media($medium-screen) {
+      margin-top: 0.7rem;
+    }
+  }
+}
+
+footer {
+  small {
+    display: inline-block;
+  }
 }
 
 p.round {
@@ -68,7 +106,7 @@ p.round {
   color: $action-color;
   height: 100px;
   font-family: 'Simplon Mono';
-  font-size:  modular-scale(-2);
+  font-size: modular-scale(-2);
   letter-spacing: 0.25rem;
   position: absolute;
   right: 0;
@@ -97,7 +135,8 @@ a {
   &:active,
   &:focus,
   &:hover {
-    color: shade($action-color, 30%);
+    color: $brand-blue;
+    transition: color $base-duration $base-timing;
   }
 }
 
@@ -121,12 +160,20 @@ hr {
 .padded {
   padding: 1rem 0;
 
-  @media($medium-screen) {
+  @include media($medium-screen) {
     padding: 3rem 0;
   }
 }
 .bottom {
   margin-bottom: 0;
+}
+
+.padded.bottom {
+  padding: 1rem 0;
+
+  @include media($medium-screen) {
+    padding: #{3 * flex-gutter()} 0 #{3 * flex-gutter()/2};
+  }
 }
 
 .page__title {
