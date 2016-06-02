@@ -9,7 +9,8 @@ body {
 }
 
 footer {
-  @include position(absolute, null null 0 null);
+  position: fixed;
+  bottom: 0;
   background-color: $white;
   width: 100%;
 }
