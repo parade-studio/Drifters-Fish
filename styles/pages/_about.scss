@@ -20,4 +20,12 @@
 			margin-bottom: 0;
 		}
 	}
+
+	.short-description {
+		margin-top: #{1.75 * flex-gutter()};
+	}
+
+	.df-seal {
+		z-index: 8;
+	}
 }
