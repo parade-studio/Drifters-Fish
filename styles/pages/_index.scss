@@ -1,3 +1,15 @@
+#logo {
+	img {
+		margin-top: -3em;
+	}
+}
+
+.section--video {
+	@include media($medium-screen) {
+		margin-top: -6.25em;
+	}
+}
+
 .section--hands {
 	.section__link {
 		margin-top: 0;
