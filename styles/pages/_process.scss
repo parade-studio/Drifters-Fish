@@ -70,7 +70,7 @@
       }
 
       small {
-        @include position(absolute, null null null 3.5em);
+        @include position(absolute, null null null 3.9em);
         padding: 0 10px;
         transform: rotate(-90deg) translateX(-50%);
         transform-origin: left;
