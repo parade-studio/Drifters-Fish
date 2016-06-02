@@ -1,0 +1,20 @@
+#contact {
+	
+	.section__link {
+	  margin-top: $base-spacing/2;
+
+	  @include media($medium-screen) {
+	  	margin-top: 0;
+	  }
+	}
+
+	.full {
+		.one-quarters {
+			margin-bottom: 0;
+		}
+	}
+
+	.short-description {
+		margin-top: #{1.75 * flex-gutter()};
+	}
+}
