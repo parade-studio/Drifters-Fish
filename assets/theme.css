@@ -153,7 +153,8 @@ figure {
 img,
 picture {
   margin: 0;
-  max-width: 100%; }
+  max-width: 100%;
+  width: 100%; }
 
 table {
   border-collapse: collapse;
@@ -179,8 +180,7 @@ th {
 body {
   color: #0A5593;
   font-family: "DomaineTextWeb-Light";
-  font-size: 1.25em;
-  line-height: 1.55; }
+  font-size: 1.25em; }
 
 h1,
 h2,
@@ -192,7 +192,7 @@ h6 {
   font-size: 1.25em;
   font-weight: 200;
   line-height: 1.6;
-  margin: 0 0 0.775em; }
+  margin: 0 0 1.47353%; }
 
 h1 {
   font-size: 1.5625em;
@@ -214,6 +214,12 @@ h3 {
     h3 {
       font-size: 1.5625em; } }
 
+h4 {
+  font-size: 0.8em; }
+  @media screen and (min-width: 600px) {
+    h4 {
+      font-size: 1.25em; } }
+
 p {
   font-size: 0.8em;
   font-weight: 100;
@@ -222,13 +228,31 @@ p {
   @media screen and (min-width: 600px) {
     p {
       font-size: 1em; } }
+  p a {
+    border-bottom: 1px solid currentColor;
+    font-size: 0.8em; }
+    @media screen and (min-width: 600px) {
+      p a {
+        font-size: 0.64em; } }
+    p a.no-border-bottom {
+      border-bottom: none; }
+      p a.no-border-bottom:hover {
+        color: #FC7523; }
 
 small {
   color: #BFBFBF;
+  display: block;
   font-family: 'Simplon Mono';
-  font-size: 0.64em;
+  font-size: 0.704rem;
   letter-spacing: 0.15rem;
+  line-height: 1.7;
   text-transform: uppercase; }
+  @media screen and (min-width: 600px) {
+    small.metadata {
+      margin-top: 0.7rem; } }
+
+footer small {
+  display: inline-block; }
 
 p.round {
   border: 2px solid #FC7523;
@@ -260,7 +284,8 @@ a {
   text-transform: uppercase;
   transition: color 300ms ease-in-out; }
   a:active, a:focus, a:hover {
-    color: #b05219; }
+    color: #0A5593;
+    transition: color 300ms ease-in-out; }
 
 hr {
   border-bottom: 1px solid #ddd;
@@ -280,12 +305,18 @@ hr {
 
 .padded {
   padding: 1rem 0; }
-  @media (600px) {
+  @media screen and (min-width: 600px) {
     .padded {
       padding: 3rem 0; } }
 
 .bottom {
   margin-bottom: 0; }
+
+.padded.bottom {
+  padding: 1rem 0; }
+  @media screen and (min-width: 600px) {
+    .padded.bottom {
+      padding: 7.07295% 0 3.53648%; } }
 
 .page__title small {
   color: transparent; }
@@ -651,7 +682,7 @@ body {
   transition: padding-bottom 300ms ease-in-out; }
 
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   background-color: #fff;
   width: 100%; }
@@ -1103,6 +1134,13 @@ footer {
     .wide-only-ib {
       display: inline-block !important; } }
 
+#logo img {
+  margin-top: -3em; }
+
+@media screen and (min-width: 600px) {
+  .section--video {
+    margin-top: -6.25em; } }
+
 .section--hands .section__link {
   margin-top: 0; }
   @media screen and (min-width: 600px) {
@@ -1216,3 +1254,21 @@ footer {
 
 #about-us .full .one-quarters {
   margin-bottom: 0; }
+
+#about-us .short-description {
+  margin-top: 4.12589%; }
+
+#about-us .df-seal {
+  z-index: 8; }
+
+#contact .section__link {
+  margin-top: 0.775em; }
+  @media screen and (min-width: 600px) {
+    #contact .section__link {
+      margin-top: 0; } }
+
+#contact .full .one-quarters {
+  margin-bottom: 0; }
+
+#contact .short-description {
+  margin-top: 4.12589%; }
