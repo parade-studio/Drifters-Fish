@@ -24,10 +24,6 @@ jQuery(function($) {
       var currentScrollTop = $('document, body').scrollTop();
       var containerHeight = status.find('.status__container').outerHeight(true);
       status.css('height', containerHeight);
-      $('document, body').animate({
-        scrollTop: currentScrollTop + containerHeight + 'px'
-      }, 300);
-      $('body').css('padding-bottom', containerHeight + triggerHeight + 'px');
       status.toggleClass('open');
     }
   })
