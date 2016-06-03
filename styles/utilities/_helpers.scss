@@ -1,7 +1,7 @@
 .desktop-only {
-	display: none !important;
+	display: none;
   	@include media($medium-screen) {
-    	display: block !important;
+    	display: block;
   	}
 }
 
