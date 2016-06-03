@@ -1,11 +1,14 @@
 jQuery(function($) {
   // Navigation trigger
   $('body').on('click', '.nav__trigger', function toggleNavigation(e) {
+    var header = $('header');
     var nav = $('nav');
     if (nav.hasClass('open')) {
+      header.toggleClass('nav_open');
       nav.css('height', 0);
       nav.toggleClass('open');
     } else {
+      header.toggleClass('nav_open');
       nav.css('height', nav.find('.nav__container').outerHeight(true));
       nav.toggleClass('open');
     }
