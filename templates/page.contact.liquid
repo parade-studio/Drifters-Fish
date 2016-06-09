@@ -8,37 +8,58 @@
     <small>Contact Us</small>
   </div>
   <div class="section__content">
-    <div>
+    <div class="one-half">
+      <p>Placeholder</p>
+    </div>
+    <div class="one-half">
       <h2>Get in touch</h2>
-      <div class="two-thirds">
-        <img src="{{ 'fish1.png' | asset_url }}" alt="Fish" />
-      </div>
-      <div class="one-thirds">
-        <p>Please contact us if you have any questions.</p>
-        <small>Email</small>
-        <p><a href="mailto:info@driftersfish.com">info@driftersfish.com</a></p>
-        <small>Telephone</small>
-        <p><a class="no-border-bottom">907.317.2958</a></p>
-      </div>
+      <p>Please contact us if you have any questions.</p>
+      <small>Email</small>
+      <p><a href="mailto:info@driftersfish.com">info@driftersfish.com</a></p>
+      <small>Telephone</small>
+      <p><a class="no-border-bottom">907.317.2958</a></p>
     </div>
   </div>
-</section>
-
-<section class="section--full-width snow-background">
   <div class="section__content">
-    <div>
-      <h2>Wholesale Inqueries</h2>
-      <div class="two-thirds">
-        <img src="{{ 'fish1.png' | asset_url }}" alt="Fish" />
-      </div>
-      <div class="one-thirds">
-        <p>Our fish is available fresh or frozen to your market or restaurant. We would love to work with you to give your customers a direct relationship to the fish on their plate.</p>
-        <form>
-          <input type="text" placeholder="Name" />
-          <input type="email" placeholder="Email" />
-          <textarea placeholder="Message"></textarea>
-        </form>
-      </div>
+    <div class="one-half">
+      <p>Placeholder</p>
     </div>
+    <div class="one-half">
+      <h2>Wholesale Inqueries</h2>
+        <p>Our fish is available fresh or frozen to your market or restaurant. We would love to work with you to give your customers a direct relationship to the fish on their plate.</p>
+        {% form 'contact' %}
+
+          {% if form.posted_successfully? %}
+            <div class="successForm feedback">
+              {{ 'contact.form.post_success' | t }}
+            </div>
+          {% endif %}
+
+          {% if form.errors %}
+          <div class="errorForm feedback">
+            {% comment %}{{ form.errors.size }} or {{ form.errors | size }} {% endcomment %}
+            <p>Your contact form has {{ form.errors | size | pluralize: ‘an error’, ‘a few errors’ }}. To submit your form, make the following changes and try again:</p>
+            {% for field in form.errors %}
+              <p>The {{ field | capitalize | replace: 'Body', 'Message' }} field {{ form.errors.messages[field] }}.</p>
+            {% endfor %}
+          </div>
+          {% endif %}
+          <form>
+            <label for="contactFormName">
+              <input required id="contactFormName" name="contact[name]">
+              <span>{{ 'contact.form.name' | t }}</span>
+            </label>
+            <label for="contactFormEmail">
+              <input type="email" required id="contactFormEmail" name="contact[email]">
+              <span>{{ 'contact.form.email' | t }}</span>
+            </label>
+            <label for="contactFormMessage">
+              <textarea required rows="3" id="contactFormMessage" name="contact[body]"></textarea>
+              <span>{{ 'contact.form.message' | t }}</span>
+            </label>
+            <input type="submit" id="contactFormSubmit" value="{{ 'contact.form.send' | t }}" />
+          </form>
+        {% endform %}
+      </div>
   </div>
 </section>
