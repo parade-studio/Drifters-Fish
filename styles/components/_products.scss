@@ -20,12 +20,19 @@
 		text-align: left;
 
 		a {
+			border-bottom: none;
 			color: $brand-blue;
 			font-size: modular-scale(1);
 			font-weight: 400;
+			transition: opacity 0.25s ease;
 
 			@include media($medium-screen) {
 				font-size: modular-scale(0);
+			}
+
+			&:hover {
+				opacity: 0.75;
+				transition: opacity 0.25s ease;
 			}
 		}
 
