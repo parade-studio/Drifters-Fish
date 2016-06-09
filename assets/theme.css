@@ -58,9 +58,15 @@ legend {
   padding: 0; }
 
 label {
+  color: #BFBFBF;
+  font-family: 'Simplon Mono';
+  font-size: 0.704rem;
+  letter-spacing: 0.2rem;
+  line-height: 1.7;
+  text-transform: uppercase;
   display: block;
-  font-weight: 600;
-  margin-bottom: 0.3875em; }
+  font-weight: 200;
+  margin-bottom: 0.775em; }
 
 input,
 select,
@@ -72,13 +78,16 @@ textarea {
 [type='color'], [type='date'], [type='datetime'], [type='datetime-local'], [type='email'], [type='month'], [type='number'], [type='password'], [type='search'], [type='tel'], [type='text'], [type='time'], [type='url'], [type='week'], input:not([type]), textarea,
 select[multiple], textarea {
   background-color: transparent;
-  border: 1px solid #ddd;
+  border: 0;
+  border-bottom: 1px solid #ddd;
   border-radius: none;
   box-shadow: none;
   box-sizing: border-box;
-  font-size: 0.8em;
-  margin-bottom: 0.96875em;
-  padding: 0.3875em 0.3875em 0.56364em;
+  color: #0A5593;
+  float: left;
+  font-size: 1.5625em;
+  margin-bottom: 0.3875em;
+  padding: 0.3875em 0;
   transition: border-color 300ms ease-in-out;
   width: 100%; }
   [type='color']:hover, [type='date']:hover, [type='datetime']:hover, [type='datetime-local']:hover, [type='email']:hover, [type='month']:hover, [type='number']:hover, [type='password']:hover, [type='search']:hover, [type='tel']:hover, [type='text']:hover, [type='time']:hover, [type='url']:hover, [type='week']:hover, input:not([type]):hover, textarea:hover,
@@ -87,9 +96,14 @@ select[multiple], textarea {
   [type='color']:focus, [type='date']:focus, [type='datetime']:focus, [type='datetime-local']:focus, [type='email']:focus, [type='month']:focus, [type='number']:focus, [type='password']:focus, [type='search']:focus, [type='tel']:focus, [type='text']:focus, [type='time']:focus, [type='url']:focus, [type='week']:focus, input:not([type]):focus, textarea:focus,
   select[multiple]:focus, textarea:focus {
     background-color: #fff;
-    border: 1px solid #FC7523;
+    border: 0;
+    border-bottom: 1px solid #FC7523;
     box-shadow: none;
     outline: none; }
+    [type='color']:focus + span, [type='date']:focus + span, [type='datetime']:focus + span, [type='datetime-local']:focus + span, [type='email']:focus + span, [type='month']:focus + span, [type='number']:focus + span, [type='password']:focus + span, [type='search']:focus + span, [type='tel']:focus + span, [type='text']:focus + span, [type='time']:focus + span, [type='url']:focus + span, [type='week']:focus + span, input:not([type]):focus + span, textarea:focus + span,
+    select[multiple]:focus + span, textarea:focus + span {
+      color: #FC7523;
+      transition: color 0.25s ease; }
   [type='color']:disabled, [type='date']:disabled, [type='datetime']:disabled, [type='datetime-local']:disabled, [type='email']:disabled, [type='month']:disabled, [type='number']:disabled, [type='password']:disabled, [type='search']:disabled, [type='tel']:disabled, [type='text']:disabled, [type='time']:disabled, [type='url']:disabled, [type='week']:disabled, input:not([type]):disabled, textarea:disabled,
   select[multiple]:disabled, textarea:disabled {
     background-color: #f2f2f2;
@@ -292,7 +306,7 @@ small {
   display: block;
   font-family: 'Simplon Mono';
   font-size: 0.704rem;
-  letter-spacing: 0.15rem;
+  letter-spacing: 0.2rem;
   line-height: 1.7;
   text-transform: uppercase; }
   @media screen and (min-width: 600px) {
@@ -383,20 +397,24 @@ header {
   top: 0;
   right: 0;
   left: 0;
-  background: rgba(255, 255, 255, 0);
-  pointer-events: none;
-  text-align: center;
-  z-index: 9;
-  transition: all 0.4s ease; }
+  pointer-events: auto;
+  z-index: 10; }
   @media screen and (min-width: 600px) {
     header {
+      background: rgba(255, 255, 255, 0);
+      pointer-events: none;
+      text-align: center;
+      z-index: 9;
+      transition: all 0.4s ease;
       height: 100%; } }
 
-@media screen and (min-width: 600px) {
-  .nav_open {
-    background: rgba(255, 255, 255, 0.9);
-    pointer-events: all;
-    transition: all 0.4s ease; } }
+.nav_open {
+  z-index: 10; }
+  @media screen and (min-width: 600px) {
+    .nav_open {
+      background: rgba(255, 255, 255, 0.9);
+      pointer-events: all;
+      transition: all 0.4s ease; } }
 
 nav {
   background-color: #0A5593;
@@ -413,7 +431,7 @@ nav {
   .nav__links a {
     color: transparent;
     display: inline-block;
-    margin: 0.8rem auto;
+    margin: 0.85rem auto;
     opacity: 1;
     width: 280px;
     -spec-transition: opacity 0.25s ease;
@@ -506,8 +524,9 @@ nav .logo {
 
 nav .seal {
   position: absolute;
+  top: 62%;
   right: 0;
-  bottom: 14%;
+  bottom: 0;
   left: 0;
   margin: auto;
   width: 90px; }
@@ -559,20 +578,33 @@ nav.open + p.mobile__logo {
   -spec-transition: opacity 0.25s ease;
   transition: opacity 0.25s ease; }
 
-.nav_open .nav__trigger {
-  position: relative; }
+.nav_open .nav__trigger::after {
+  position: absolute;
+  right: 0;
+  bottom: 8%;
+  left: 0;
+  background: url("df-mobile-close.svg") repeat-x 0 0;
+  background-size: 100%;
+  height: 20px;
+  margin: 0 auto;
+  opacity: 1;
+  width: 20px;
+  z-index: 9;
+  transition: all 0.25s ease; }
+
+@media screen and (min-width: 600px) {
+  .nav_open .nav__trigger {
+    position: relative; } }
 
 .nav__trigger {
   position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  right: 4%;
   cursor: pointer;
   display: inline-block;
   float: right;
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   margin: 0 auto;
   padding: 1.8em 1.5em;
   pointer-events: all;
@@ -580,22 +612,36 @@ nav.open + p.mobile__logo {
   .nav__trigger::before {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 2%;
     left: 0;
     background: url("df-wave-menu.svg") repeat-x 0 0;
     background-size: 100%;
     content: '';
     display: block;
-    height: 30px;
+    height: 25px;
     margin: 0 auto;
-    width: 30px; }
-  .nav__trigger:hover::before {
-    animation: animatedBackground 0.75s linear infinite;
-    animation-delay: 0; }
+    width: 25px; }
+  .nav__trigger::after {
+    content: '';
+    opacity: 0;
+    transition: all 0.25s ease; }
   @media screen and (min-width: 600px) {
     .nav__trigger {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       float: none;
-      padding: 1.55em; } }
+      padding: 1.55em;
+      height: 30px;
+      width: 30px; }
+      .nav__trigger:hover::before {
+        animation: animatedBackground 0.75s linear infinite;
+        animation-delay: 0; }
+      .nav__trigger::before {
+        height: 30px;
+        width: 30px; } }
 
 section {
   position: relative; }
@@ -786,6 +832,8 @@ footer {
   .section--status .section__content {
     padding-bottom: 0.94306%;
     padding-top: 1.17883%; }
+  .section--status span {
+    font-size: 1rem; }
   .section--status small {
     color: #FC7523;
     font-size: 0.512em; }
@@ -799,11 +847,12 @@ footer {
       .section--status .text-right p {
         margin-left: 2.325em; } }
   .section--status .text-center .logo {
-    padding: 20px 0;
+    padding: 15px 0;
     vertical-align: middle;
     width: 20px; }
     @media screen and (min-width: 600px) {
       .section--status .text-center .logo {
+        padding: 20px 0;
         width: 25px; } }
 
 .status__trigger {
@@ -896,12 +945,17 @@ footer {
   .product--container .product--details {
     text-align: left; }
     .product--container .product--details a {
+      border-bottom: none;
       color: #0A5593;
       font-size: 1.25em;
-      font-weight: 400; }
+      font-weight: 400;
+      transition: opacity 0.25s ease; }
       @media screen and (min-width: 600px) {
         .product--container .product--details a {
           font-size: 1em; } }
+      .product--container .product--details a:hover {
+        opacity: 0.75;
+        transition: opacity 0.25s ease; }
     .product--container .product--details small {
       color: #FC7523; }
     .product--container .product--details.five {
@@ -1364,6 +1418,17 @@ footer {
 #about-us .df-seal {
   z-index: 8; }
 
+#contact .one-half h2 {
+  margin-bottom: 0.25833em; }
+
+#contact .one-half p {
+  font-size: 1.1rem; }
+  #contact .one-half p a {
+    font-size: 0.78rem; }
+
+#contact .one-half small {
+  margin-top: 1.86em; }
+
 #contact .section__link {
   margin-top: 0.775em; }
   @media screen and (min-width: 600px) {
@@ -1375,3 +1440,6 @@ footer {
 
 #contact .short-description {
   margin-top: 4.12589%; }
+
+#contact form input[type="submit"] {
+  margin-top: 1.2rem; }
