@@ -22,6 +22,10 @@ footer {
     padding-top: #{0.5 * flex-gutter()};
   }
 
+  span {
+    font-size: modular-scale(-1, 1.25rem);
+  }
+
   small {
     color: $brand-orange;
     font-size: modular-scale(-3);
@@ -47,11 +51,12 @@ footer {
 
   .text-center {
     .logo {
-      padding: 20px 0;
+      padding: 15px 0;
       vertical-align: middle;
       width: 20px;
 
       @include media($medium-screen) {
+        padding: 20px 0;
         width: 25px;
       }
     }
