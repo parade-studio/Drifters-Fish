@@ -1,17 +1,21 @@
 header {
   @include position(fixed, 0 0 null 0);
-  background: rgba(255,255,255, 0);
-  pointer-events: none;
-  text-align: center;
-  z-index: 9;
-  transition: all 0.4s ease;
+  pointer-events: auto;
+  z-index: 10;
 
   @include media($medium-screen) {
+    background: rgba(255,255,255, 0);
+    pointer-events: none;
+    text-align: center;
+    z-index: 9;
+    transition: all 0.4s ease;
     height: 100%;
   }
 }
 
 .nav_open {
+  z-index: 10;
+
   @include media($medium-screen) {
     background: rgba(255,255,255, 0.9);
     pointer-events: all;
@@ -36,7 +40,7 @@ nav {
   a {
     color: transparent;
     display: inline-block;
-    margin: 0.8rem auto;
+    margin: 0.85rem auto;
     opacity: 1;
     width: 280px;
     @include transition(opacity 0.25s ease);
@@ -147,7 +151,7 @@ nav .logo {
 }
 
 nav .seal {
-  @include position(absolute, null 0 14% 0);
+  @include position(absolute, 62% 0 0 0);
   margin: auto;
   width: 90px;
 
@@ -207,45 +211,72 @@ nav.open + p.mobile__logo {
 
 .nav_open {
   .nav__trigger {
-    position: relative;
+    &::after {
+      @include position(absolute, null 0 8% 0);
+      background: url('df-mobile-close.svg') repeat-x 0 0;
+      background-size: 100%;
+      height: 20px;
+      margin: 0 auto;
+      opacity: 1;
+      width: 20px;
+      z-index: 9;
+      transition: all 0.25s ease;
+    }
+
+    @include media($medium-screen) {
+      position: relative;
+    }
   }
 }
 
 .nav__trigger {
-  @include position(absolute, 0 0 0 0);
+  @include position(absolute, 0 4% null null);
   cursor: pointer;
   display: inline-block;
   float: right;
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   margin: 0 auto;
   padding: 1.8em 1.5em;
   pointer-events: all;
   z-index: 8;
 
   &::before {
-    @include position(absolute, null 0 0 0);
+    @include position(absolute, null 0 2% 0);
     background: url('df-wave-menu.svg') repeat-x 0 0;
     background-size: 100%;
     content: '';
     display: block;
-    height: 30px;
+    height: 25px;
     margin: 0 auto;
-    width: 30px;
+    width: 25px;
   }
 
-  &:hover {
-    &::before {
-      -webkit-animation: animatedBackground 0.75s linear infinite;
-      -moz-animation: animatedBackground 0.75s linear infinite;
-      animation: animatedBackground 0.75s linear infinite;
-      animation-delay: 0;
-    }
+  &::after {
+    content: '';
+    opacity: 0;
+    transition: all 0.25s ease;
   }
 
   @include media($medium-screen) {
+    &:hover {
+      &::before {
+        -webkit-animation: animatedBackground 0.75s linear infinite;
+        -moz-animation: animatedBackground 0.75s linear infinite;
+        animation: animatedBackground 0.75s linear infinite;
+        animation-delay: 0;
+      }
+    }
+
+    @include position(absolute, 0 0 0 0);
     float: none;
     padding: $base-spacing;
+    height: 30px;
+    width: 30px;
 
+    &::before {
+      height: 30px;
+      width: 30px;
+    }
   }
 }
