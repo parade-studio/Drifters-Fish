@@ -524,11 +524,16 @@ nav.open + p.mobile__logo {
   pointer-events: all;
   z-index: 8; }
   .nav__trigger::before {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background: url("df-wave-menu.svg") repeat-x 0 0;
     background-size: 100%;
     content: '';
     display: block;
     height: 30px;
+    margin: 0 auto;
     width: 30px; }
   .nav__trigger:hover::before {
     animation: animatedBackground 1s linear infinite; }
@@ -1226,6 +1231,9 @@ footer {
 #process .snow-background .process__location small {
   background-color: #FDFBFA; }
 
+#process .process__season {
+  font-size: 0.512em; }
+
 #process .process__location {
   display: none; }
   #process .process__location small {
@@ -1242,7 +1250,7 @@ footer {
       #process .process__location .line {
         position: absolute;
         top: 0;
-        left: 2.2em;
+        left: 1.5em;
         border-bottom: 1px solid #BFBFBF;
         height: 0;
         transform-origin: left;
@@ -1253,7 +1261,7 @@ footer {
           transform: rotate(-90deg) translateX(-7%); }
       #process .process__location small {
         position: absolute;
-        left: 3.9em;
+        left: 2.7em;
         padding: 0 10px;
         transform: rotate(-90deg) translateX(-50%);
         transform-origin: left; } }
