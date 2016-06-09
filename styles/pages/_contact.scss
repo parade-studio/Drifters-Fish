@@ -1,4 +1,20 @@
 #contact {
+
+	.one-half {
+		h2 {
+			margin-bottom: $base-spacing/6;
+		}
+		p {
+			font-size: modular-scale(0, 1.1rem);
+
+			a {
+				font-size: modular-scale(0, 0.78rem);
+			}
+		}
+		small {
+			margin-top: $base-spacing*1.2;
+		}
+	}
 	
 	.section__link {
 	  margin-top: $base-spacing/2;
@@ -16,5 +32,11 @@
 
 	.short-description {
 		margin-top: #{1.75 * flex-gutter()};
+	}
+
+	form {
+		input[type="submit"] {
+			margin-top: 1.2rem;
+		}
 	}
 }
