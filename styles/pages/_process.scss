@@ -41,6 +41,10 @@
     background-color: $snow;
   }
 
+  .process__season {
+    font-size: modular-scale(-3);
+  }
+
   .process__location {
     small {
       @include pad;
@@ -55,7 +59,7 @@
       transform: translateY(-50%);
 
       .line {
-        @include position(absolute, 0 null null 2.2em);
+        @include position(absolute, 0 null null 1.5em);
         border-bottom: 1px solid $silver;
         height: 0;
         transform-origin: left;
@@ -70,7 +74,7 @@
       }
 
       small {
-        @include position(absolute, null null null 3.9em);
+        @include position(absolute, null null null 2.7em);
         padding: 0 10px;
         transform: rotate(-90deg) translateX(-50%);
         transform-origin: left;
