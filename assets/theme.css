@@ -83,7 +83,7 @@ select[multiple], textarea {
   border-radius: none;
   box-shadow: none;
   box-sizing: border-box;
-  color: #0A5593;
+  color: #444;
   float: left;
   font-size: 1.5625em;
   margin-bottom: 0.3875em;
@@ -331,7 +331,7 @@ p.round {
   text-transform: uppercase;
   top: 0;
   width: 100px;
-  z-index: 5; }
+  z-index: 0; }
   p.round span {
     display: table-cell;
     padding-top: 5px;
@@ -397,16 +397,16 @@ header {
   top: 0;
   right: 0;
   left: 0;
+  height: 100%;
   pointer-events: auto;
   z-index: 10; }
   @media screen and (min-width: 600px) {
     header {
       background: rgba(255, 255, 255, 0);
-      pointer-events: none;
+      height: auto;
       text-align: center;
-      z-index: 9;
-      transition: all 0.4s ease;
-      height: 100%; } }
+      z-index: 8;
+      transition: all 0.4s ease; } }
 
 .nav_open {
   z-index: 10; }
@@ -424,10 +424,18 @@ nav {
   position: relative;
   text-align: center;
   transition: height 300ms ease-in-out; }
+  @media screen and (min-width: 600px) {
+    nav {
+      background-color: transparent;
+      color: #0A5593;
+      height: 90px !important; } }
 
 .nav__links {
   position: relative;
   z-index: 10; }
+  @media screen and (min-width: 600px) {
+    .nav__links li {
+      float: left; } }
   .nav__links a {
     color: transparent;
     display: inline-block;
@@ -438,8 +446,16 @@ nav {
     transition: opacity 0.25s ease; }
     @media screen and (min-width: 600px) {
       .nav__links a {
-        margin: 1rem auto;
-        width: 350px; } }
+        color: #999;
+        float: left;
+        font-size: 0.68rem;
+        letter-spacing: 0.2rem;
+        margin: 2.3rem auto;
+        width: 19.5vw; }
+        .nav__links a:hover {
+          color: #999 !important;
+          -spec-transition: color 0.25s ease;
+          transition: color 0.25s ease; } }
     .nav__links a:hover {
       color: transparent;
       opacity: 0.7;
@@ -450,42 +466,47 @@ nav {
       background-size: auto 15px; }
       @media screen and (min-width: 600px) {
         .nav__links a.process {
-          background-size: auto 20px; } }
+          background: none; } }
     .nav__links a.about {
       background: transparent url("df-nav-about.svg") no-repeat 50% 50%;
       background-size: auto 15px; }
       @media screen and (min-width: 600px) {
         .nav__links a.about {
-          background-size: auto 20px; } }
+          background: none; } }
     .nav__links a.recipes {
       background: transparent url("df-nav-recipes.svg") no-repeat 50% 50%;
       background-size: auto 15px; }
       @media screen and (min-width: 600px) {
         .nav__links a.recipes {
-          background-size: auto 20px; } }
+          background: none; } }
     .nav__links a.contact {
       background: transparent url("df-nav-contact.svg") no-repeat 50% 50%;
       background-size: auto 15px;
       margin-bottom: 4rem; }
       @media screen and (min-width: 600px) {
         .nav__links a.contact {
-          background-size: auto 20px;
-          margin-bottom: 3.2rem; } }
+          background: none;
+          margin-bottom: 1.2rem; } }
     .nav__links a.order {
       background: transparent url("df-nav-order-salmon.svg") no-repeat 50% 50%;
       background-size: auto 15px;
       margin: 2.5rem auto; }
       @media screen and (min-width: 600px) {
         .nav__links a.order {
-          background-size: auto 20px;
-          margin: 2.2rem auto; } }
+          background: none;
+          margin: 1.2rem auto; } }
+  @media screen and (min-width: 600px) {
+    .nav__links .first a {
+      color: #FC7523 !important; }
+      .nav__links .first a:hover {
+        color: #FC7523 !important; } }
   .nav__links .last {
     border-bottom: 1px solid #BFBFBF;
     border-top: 1px solid #BFBFBF;
     position: relative; }
     @media screen and (min-width: 600px) {
       .nav__links .last {
-        border-bottom: none; } }
+        border: none; } }
     .nav__links .last::before {
       position: absolute;
       top: -42px;
@@ -499,13 +520,7 @@ nav {
       width: 200px; }
       @media screen and (min-width: 600px) {
         .nav__links .last::before {
-          position: absolute;
-          top: -52%;
-          left: 45px;
-          height: 80px;
-          margin: 0;
-          padding: 1rem;
-          width: 220px; } }
+          display: none; } }
 
 nav a {
   color: #fff;
@@ -520,7 +535,14 @@ nav .logo {
   z-index: 10; }
   @media screen and (min-width: 600px) {
     nav .logo {
-      margin: 1.5em auto; } }
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      margin: 0 auto;
+      width: 135px; } }
 
 nav .seal {
   position: absolute;
@@ -532,11 +554,7 @@ nav .seal {
   width: 90px; }
   @media screen and (min-width: 600px) {
     nav .seal {
-      position: absolute;
-      top: -50px;
-      left: 65px;
-      margin: 0;
-      width: 180px; } }
+      display: none; } }
 
 .nav__container {
   position: absolute;
@@ -547,10 +565,11 @@ nav .seal {
   width: calc(100% - 1.5rem); }
   @media screen and (min-width: 600px) {
     .nav__container {
+      border: none;
       height: auto;
-      margin: 1rem;
+      margin: 0.5rem;
       top: auto;
-      width: calc(100% - 2rem); } }
+      width: calc(100% - 1rem); } }
 
 @keyframes animatedBackground {
   from {
@@ -617,6 +636,7 @@ nav.open + p.mobile__logo {
     background: url("df-wave-menu.svg") repeat-x 0 0;
     background-size: 100%;
     content: '';
+    cursor: pointer;
     display: block;
     height: 25px;
     margin: 0 auto;
@@ -627,6 +647,7 @@ nav.open + p.mobile__logo {
     transition: all 0.25s ease; }
   @media screen and (min-width: 600px) {
     .nav__trigger {
+      display: none;
       position: absolute;
       top: 0;
       right: 0;
@@ -885,9 +906,6 @@ footer {
 
 .section--video {
   padding-top: 3.1em; }
-  @media screen and (min-width: 600px) {
-    .section--video {
-      padding-top: 0; } }
 
 .video-wrapper {
   height: 0;
@@ -1290,10 +1308,6 @@ footer {
     height: 100vh;
     width: 100%;
     z-index: 8; } }
-
-@media screen and (min-width: 600px) {
-  .section--video {
-    margin-top: -6.25em; } }
 
 .section--hands .section__link {
   margin-top: 0; }
