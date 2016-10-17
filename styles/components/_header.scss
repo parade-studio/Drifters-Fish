@@ -1,15 +1,15 @@
 header {
   @include position(fixed, 0 0 null 0);
+  height: 100%;
   pointer-events: auto;
   z-index: 10;
 
   @include media($medium-screen) {
     background: rgba(255,255,255, 0);
-    pointer-events: none;
+    height: auto;
     text-align: center;
-    z-index: 9;
+    z-index: 8;
     transition: all 0.4s ease;
-    height: 100%;
   }
 }
 
@@ -31,11 +31,23 @@ nav {
   position: relative;
   text-align: center;
   transition: height $base-duration $base-timing;
+
+  @include media($medium-screen) {
+    background-color: transparent;
+    color: $brand-blue;
+    height: 90px !important;
+  }
 }
 
 .nav__links {
   position: relative;
   z-index: 10;
+
+  @include media($medium-screen) {
+    li {
+      float: left;
+    }
+  }
 
   a {
     color: transparent;
@@ -46,8 +58,17 @@ nav {
     @include transition(opacity 0.25s ease);
 
     @include media($medium-screen) {
-      margin: 1rem auto;
-      width: 350px;
+      color: #999;
+      float: left;
+      font-size: 0.68rem;
+      letter-spacing: 0.2rem;
+      margin: 2.3rem auto;
+      width: 19.5vw;
+
+      &:hover {
+        color: #999 !important;
+        @include transition(color 0.25s ease);
+      }
     }
 
     &:hover {
@@ -61,7 +82,7 @@ nav {
       background-size: auto 15px;
 
       @include media($medium-screen) {
-        background-size: auto 20px;
+        background: none;
       }
     }
     &.about {
@@ -69,7 +90,7 @@ nav {
       background-size: auto 15px;
 
       @include media($medium-screen) {
-        background-size: auto 20px;
+        background: none;
       }
     }
     &.recipes {
@@ -77,7 +98,7 @@ nav {
       background-size: auto 15px;
 
       @include media($medium-screen) {
-        background-size: auto 20px;
+        background: none;
       }
     }
     &.contact {
@@ -86,8 +107,8 @@ nav {
       margin-bottom: 4rem;
 
       @include media($medium-screen) {
-        background-size: auto 20px;
-        margin-bottom: 3.2rem;
+        background: none;
+        margin-bottom: 1.2rem
       }
     }
     &.order {
@@ -96,8 +117,20 @@ nav {
       margin: 2.5rem auto;
 
       @include media($medium-screen) {
-        background-size: auto 20px;
-        margin: 2.2rem auto;
+        background: none;
+        margin: 1.2rem auto;
+      }
+    }
+  }
+
+  .first {
+    @include media($medium-screen) {
+      a {
+        color: $brand-orange !important;
+
+        &:hover {
+          color: $brand-orange !important;
+        }
       }
     }
   }
@@ -108,7 +141,7 @@ nav {
     position:relative;
 
     @include media($medium-screen) {
-      border-bottom: none;
+      border: none;
     }
 
     &::before {
@@ -121,11 +154,7 @@ nav {
       width: 200px;
 
       @include media($medium-screen) {
-        @include position(absolute, -52% null null 45px)
-        height: 80px;
-        margin: 0;
-        padding: 1rem;
-        width: 220px;
+        display: none;
       }
     }
   }
@@ -146,7 +175,10 @@ nav .logo {
   z-index: 10;
 
   @include media($medium-screen) {
-    margin: 1.5em auto;
+    @include position(absolute, 0 0 0 0);
+    display: block;
+    margin: 0 auto;
+    width: 135px;
   }
 }
 
@@ -156,9 +188,7 @@ nav .seal {
   width: 90px;
 
   @include media($medium-screen) {
-    @include position(absolute, -50px null null 65px);
-    margin: 0;
-    width: 180px;
+    display: none;
   }
 }
 
@@ -171,10 +201,11 @@ nav .seal {
   width: calc(100% - 1.5rem);
 
   @include media($medium-screen) {
+    border: none;
     height: auto;
-    margin: 1rem;
+    margin: 0.5rem;
     top: auto;
-    width: calc(100% - 2rem);
+    width: calc(100% - 1rem);
   }
 }
 
@@ -246,6 +277,7 @@ nav.open + p.mobile__logo {
     background: url('df-wave-menu.svg') repeat-x 0 0;
     background-size: 100%;
     content: '';
+    cursor: pointer;
     display: block;
     height: 25px;
     margin: 0 auto;
@@ -259,6 +291,7 @@ nav.open + p.mobile__logo {
   }
 
   @include media($medium-screen) {
+    display: none;
     &:hover {
       &::before {
         -webkit-animation: animatedBackground 0.75s linear infinite;
