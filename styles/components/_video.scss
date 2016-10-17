@@ -1,9 +1,5 @@
 .section--video {
   padding-top: $base-spacing*2;
-
-  @include media($medium-screen) {
-   padding-top: 0;
-  }
 }
 
 .video-wrapper {
