@@ -1,0 +1,26 @@
+{% assign hero_navigation_only = true %}
+
+{% paginate blog.articles by 5 %}
+  <div class="fluid-container">
+    {% assign blog_list = true %}
+    {% for article in blog.articles %}
+
+      <div class="fluid-item one-half column article">
+
+        <p class="blog-list__image"><a href="{{ article.url }}"><img src="{{ article | img_url: 'master' }}" /></a></p>
+        <div class="blog__details">
+          {% include 'article' %}
+          <p><a class="blog__read-more" href="{{ article.url }}">{{ 'blogs.article.read_more' | t }} &rarr;</a></p>
+        </div>
+      </div>
+
+    {% endfor %}
+
+    {% if paginate.pages > 1 %}
+      <div class="text-center">
+        {% include 'pagination-custom' %}
+      </div>
+    {% endif %}
+  </div>
+
+{% endpaginate %}

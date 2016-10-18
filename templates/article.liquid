@@ -1,0 +1,25 @@
+<section>
+  <div class="section__content page__title">
+  </div>
+  <div class="section__content article__feature">
+  	<img src="{{ article.image.src | img_url: '1024x1024' }}" alt="{{ article.image.alt }}" />
+  </div>
+  <div class="section__content article__all">
+  	<div class="article__header">
+	  <small><time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'month_day_year' }}</time></small>
+	  <h2 class="section-header__title">{{ article.title }}</h2>
+	</div>
+	<div class="article__body rte" itemprop="articleBody">
+	  {% if blog_list %}
+	    {% if article.excerpt.size > 0 %}
+	      {{ article.excerpt }}
+	    {% else %}
+	      <p>{{ article.content | strip_html | truncatewords: 40 }}</p>
+	    {% endif %}
+	  {% else %}
+	    {{ article.content }}
+	  {% endif %}
+	  <a href="/pages/recipes" class="article__back"><small>&#8592; Around the table</small></a>
+	</div>
+</div> 
+</section>
