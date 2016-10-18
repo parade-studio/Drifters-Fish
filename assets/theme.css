@@ -4,7 +4,7 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-button, [type='button'], [type='reset'], [type='submit'] {
+button, [type='button'], [type='reset'], [type='submit'], #contactFormSubmit {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -32,19 +32,25 @@ button, [type='button'], [type='reset'], [type='submit'] {
   -spec-transition: all 0.2s ease;
   transition: all 0.2s ease; }
   @media screen and (min-width: 600px) {
-    button, [type='button'], [type='reset'], [type='submit'] {
+    button, [type='button'], [type='reset'], [type='submit'], #contactFormSubmit {
       font-size: 0.64em;
       padding: 0.86111em; } }
-  button:hover, button:focus, [type='button']:hover, [type='button']:focus, [type='reset']:hover, [type='reset']:focus, [type='submit']:hover, [type='submit']:focus {
+  button:hover, button:focus, [type='button']:hover, [type='button']:focus, [type='reset']:hover, [type='reset']:focus, [type='submit']:hover, [type='submit']:focus, #contactFormSubmit:hover, #contactFormSubmit:focus {
     background-color: #FC7523;
     color: #fff;
     -spec-transition: all 0.2s ease;
     transition: all 0.2s ease; }
-  button:disabled, [type='button']:disabled, [type='reset']:disabled, [type='submit']:disabled {
+  button:disabled, [type='button']:disabled, [type='reset']:disabled, [type='submit']:disabled, #contactFormSubmit:disabled {
     cursor: not-allowed;
     opacity: 0.5; }
-    button:disabled:hover, [type='button']:disabled:hover, [type='reset']:disabled:hover, [type='submit']:disabled:hover {
+    button:disabled:hover, [type='button']:disabled:hover, [type='reset']:disabled:hover, [type='submit']:disabled:hover, #contactFormSubmit:disabled:hover {
       background-color: #FC7523; }
+
+#contactFormSubmit {
+  width: 100%; }
+  @media screen and (min-width: 600px) {
+    #contactFormSubmit {
+      width: 50%; } }
 
 fieldset {
   background-color: transparent;
@@ -1124,6 +1130,110 @@ footer {
 .cart--page textarea {
   border-radius: 0;
   box-shadow: none; }
+
+#recipes .blog__list {
+  padding-top: 0; }
+  @media screen and (min-width: 600px) {
+    #recipes .blog__list {
+      padding-top: 6.48354%; } }
+
+#recipes .article {
+  margin-bottom: 0.75rem;
+  padding: 1rem 0; }
+  @media screen and (min-width: 600px) {
+    #recipes .article {
+      padding: 0.5rem; } }
+
+.blog__details {
+  margin-bottom: 1rem;
+  text-align: center; }
+  .blog__details h2 {
+    color: #0A5593;
+    font-size: 2.1rem;
+    letter-spacing: 0;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    text-transform: capitalize; }
+  .blog__details p {
+    font-size: 1rem; }
+  @media screen and (min-width: 600px) {
+    .blog__details {
+      margin-bottom: 0; } }
+
+.blog__read-more {
+  padding-bottom: 0.1rem; }
+
+.blog-list__image {
+  margin-bottom: 0.75rem; }
+  .blog-list__image a {
+    border-bottom: none;
+    opacity: 1;
+    -spec-transition: opacity 0.25s linear;
+    transition: opacity 0.25s linear; }
+    .blog-list__image a:hover {
+      opacity: 0.8;
+      -spec-transition: opacity 0.25s linear;
+      transition: opacity 0.25s linear; }
+  .blog-list__image img {
+    height: 325px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    overflow: hidden; }
+    @media screen and (min-width: 600px) {
+      .blog-list__image img {
+        height: 450px; } }
+
+.template-article .article__all {
+  margin: 0 auto;
+  padding-top: 0;
+  width: 95vw; }
+  @media screen and (min-width: 600px) {
+    .template-article .article__all {
+      max-width: 950px;
+      width: 65vw; } }
+  .template-article .article__all h2 {
+    font-size: 1.85rem; }
+    @media screen and (min-width: 600px) {
+      .template-article .article__all h2 {
+        font-size: 2.5rem; } }
+  .template-article .article__all p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.35rem; }
+    @media screen and (min-width: 600px) {
+      .template-article .article__all p {
+        font-size: 1.1rem;
+        line-height: 1.6; } }
+
+.template-article .article__back small {
+  border-bottom: 1px solid #FC7523;
+  color: #FC7523;
+  display: inline-block;
+  opacity: 1;
+  padding: 0.05rem;
+  -spec-transition: all 0.2s linear;
+  transition: all 0.2s linear; }
+  .template-article .article__back small:hover {
+    border-color: #0A5593;
+    color: #0A5593;
+    opacity: 0.8;
+    -spec-transition: all 0.2s linear;
+    transition: all 0.2s linear; }
+
+.template-article .article__feature {
+  padding-top: 0; }
+  @media screen and (min-width: 600px) {
+    .template-article .article__feature {
+      padding-top: 4.12589%; } }
+  .template-article .article__feature img {
+    display: block;
+    height: 400px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    overflow: hidden; }
+    @media screen and (min-width: 600px) {
+      .template-article .article__feature img {
+        height: 50vh; } }
 
 .alabaster-background {
   background-color: #FCFCFA; }
