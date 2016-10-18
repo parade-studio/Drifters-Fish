@@ -1,4 +1,4 @@
-#{$all-buttons} {
+#{$all-buttons}, #contactFormSubmit {
   appearance: none;
   background-color: transparent;
   border: 1px solid $action-color;
@@ -40,5 +40,13 @@
     &:hover {
       background-color: $action-color;
     }
+  }
+}
+
+#contactFormSubmit {
+  width: 100%;
+
+  @include media($medium-screen) {
+    width: 50%;
   }
 }
