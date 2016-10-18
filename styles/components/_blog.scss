@@ -1,0 +1,136 @@
+#recipes {
+  .blog__list {
+    padding-top: 0;
+
+    @include media($medium-screen) {
+      padding-top: #{2.75 * flex-gutter()};
+    }
+  }
+
+  .article {
+    margin-bottom: 0.75rem;
+    padding: 1rem 0;
+
+    @include media($medium-screen) {
+      padding: 0.5rem;
+    }
+  }
+}
+
+.blog__details {
+  margin-bottom: 1rem;
+  text-align: center;
+
+  h2 {
+    color: $brand-blue;
+    font-size: 2.1rem;
+    letter-spacing: 0;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  @include media($medium-screen) {
+    margin-bottom: 0;
+  }
+}
+
+.blog__read-more {
+  padding-bottom: 0.1rem;
+}
+
+.blog-list__image {
+  margin-bottom: 0.75rem;
+
+  a {
+    border-bottom: none;
+    opacity: 1;
+    @include transition(opacity 0.25s linear);
+
+    &:hover {
+      opacity: 0.8;
+      @include transition(opacity 0.25s linear);
+    }
+  }
+
+  img {
+    height: 325px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    overflow: hidden;
+
+    @include media($medium-screen) {
+      height: 450px;
+    }
+  }
+}
+
+.template-article {
+  .article__all {
+    margin: 0 auto;
+    padding-top: 0;
+    width: 95vw;
+
+    @include media($medium-screen) {
+      max-width: 950px;
+      width: 65vw;
+    }
+
+    h2 {
+      font-size: 1.85rem;
+
+      @include media($medium-screen) {
+        font-size: 2.5rem;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 1.35rem;
+
+      @include media($medium-screen) {
+        font-size: 1.1rem;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  .article__back small {
+    border-bottom: 1px solid $brand-orange;
+    color: $brand-orange;
+    display: inline-block;
+    opacity: 1;
+    padding: 0.05rem;
+    @include transition(all 0.2s linear);
+
+    &:hover {
+      border-color: $brand-blue;
+      color: $brand-blue;
+      opacity: 0.8;
+      @include transition(all 0.2s linear);
+    }
+  }
+  .article__feature {
+    padding-top: 0;
+
+    @include media($medium-screen) {
+      padding-top: #{1.75 * flex-gutter()};
+    }
+    img {
+      display: block;
+      height: 400px;
+      object-fit: cover;
+      object-position: 50% 50%;
+      overflow: hidden;
+
+      @include media($medium-screen) {
+        height: 50vh;
+      }
+    }
+  }
+}
