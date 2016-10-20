@@ -2,7 +2,6 @@ html {
   height: 100%;
 }
 body {
-  padding-bottom: 98px; // estimate of status height, JS this
   position: relative;
   min-height: 100%;
   transition: padding-bottom $base-duration $base-timing;
@@ -93,6 +92,7 @@ footer {
   }
 
   small {
+    color: $medium-gray;
     font-size: modular-scale(-2);
   }
 
