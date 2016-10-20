@@ -4,7 +4,7 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-button, [type='button'], [type='reset'], [type='submit'], #contactFormSubmit {
+button, [type='button'], [type='reset'], [type='submit'], #contactFormSubmit, a.button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -18,9 +18,10 @@ button, [type='button'], [type='reset'], [type='submit'], #contactFormSubmit {
   font-size: 0.64em;
   -webkit-font-smoothing: antialiased;
   font-weight: 500;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.2rem;
   min-width: 250px;
   padding: 1.29167em;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   -webkit-user-select: none;
@@ -32,18 +33,18 @@ button, [type='button'], [type='reset'], [type='submit'], #contactFormSubmit {
   -spec-transition: all 0.2s ease;
   transition: all 0.2s ease; }
   @media screen and (min-width: 600px) {
-    button, [type='button'], [type='reset'], [type='submit'], #contactFormSubmit {
+    button, [type='button'], [type='reset'], [type='submit'], #contactFormSubmit, a.button {
       font-size: 0.64em;
       padding: 0.86111em; } }
-  button:hover, button:focus, [type='button']:hover, [type='button']:focus, [type='reset']:hover, [type='reset']:focus, [type='submit']:hover, [type='submit']:focus, #contactFormSubmit:hover, #contactFormSubmit:focus {
+  button:hover, button:focus, [type='button']:hover, [type='button']:focus, [type='reset']:hover, [type='reset']:focus, [type='submit']:hover, [type='submit']:focus, #contactFormSubmit:hover, #contactFormSubmit:focus, a.button:hover, a.button:focus {
     background-color: #FC7523;
     color: #fff;
     -spec-transition: all 0.2s ease;
     transition: all 0.2s ease; }
-  button:disabled, [type='button']:disabled, [type='reset']:disabled, [type='submit']:disabled, #contactFormSubmit:disabled {
+  button:disabled, [type='button']:disabled, [type='reset']:disabled, [type='submit']:disabled, #contactFormSubmit:disabled, a.button:disabled {
     cursor: not-allowed;
     opacity: 0.5; }
-    button:disabled:hover, [type='button']:disabled:hover, [type='reset']:disabled:hover, [type='submit']:disabled:hover, #contactFormSubmit:disabled:hover {
+    button:disabled:hover, [type='button']:disabled:hover, [type='reset']:disabled:hover, [type='submit']:disabled:hover, #contactFormSubmit:disabled:hover, a.button:disabled:hover {
       background-color: #FC7523; }
 
 #contactFormSubmit {
@@ -340,7 +341,9 @@ p.round {
   z-index: 0; }
   p.round span {
     display: table-cell;
-    padding-top: 5px;
+    line-height: 1.35;
+    padding-left: 3px;
+    padding-top: 0;
     vertical-align: middle; }
 
 a {
@@ -354,6 +357,14 @@ a {
   a:active, a:focus, a:hover {
     color: #0A5593;
     transition: color 300ms ease-in-out; }
+  a p.round {
+    -spec-transition: all 0.2s linear;
+    transition: all 0.2s linear; }
+    a p.round:hover {
+      background: #FC7523;
+      color: #fff;
+      -spec-transition: all 0.2s linear;
+      transition: all 0.2s linear; }
 
 hr {
   border-bottom: 1px solid #ddd;
@@ -808,18 +819,21 @@ section {
           -spec-transition: all 0.2s ease;
           transition: all 0.2s ease; } }
 
-.section__link__normal a {
-  border-bottom: 1px solid #FC7523;
-  display: inline-block;
-  letter-spacing: 0.25rem;
-  -spec-transition: all 0.2s ease;
-  transition: all 0.2s ease; }
-  .section__link__normal a:hover {
-    background-color: inherit;
-    border-color: #0A5593;
-    color: inherit;
+.section__link__normal {
+  margin: 3.5rem auto 0; }
+  .section__link__normal a {
+    border-bottom: 1px solid #FC7523;
+    display: inline-block;
+    font-size: 0.64em;
+    letter-spacing: 0.25rem;
     -spec-transition: all 0.2s ease;
     transition: all 0.2s ease; }
+    .section__link__normal a:hover {
+      background-color: inherit;
+      border-color: #0A5593;
+      color: inherit;
+      -spec-transition: all 0.2s ease;
+      transition: all 0.2s ease; }
 
 .secondary-link {
   color: #BFBFBF;
@@ -1446,6 +1460,11 @@ footer {
   @media screen and (min-width: 900px) {
     .wide-only-ib {
       display: inline-block !important; } }
+
+.center-content {
+  clear: both;
+  margin: 0 auto;
+  text-align: center; }
 
 #logo img {
   margin-top: -3em; }
