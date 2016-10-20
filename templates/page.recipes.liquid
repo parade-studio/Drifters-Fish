@@ -8,10 +8,8 @@
   <div class="section__content blog__list">
   	<div class="fluid-container">
   	  {% assign blog = blogs.recipes %}
-  	  {% for article in blogs.recipes.articles limit: 3 %}
-
+  	  {% for article in blogs.recipes.articles %}
   	    <div class="fluid-item one-thirds column article">
-
   	      <p class="blog-list__image"><a href="{{ article.url }}"><img src="{{ article | img_url: 'master' }}" /></p>
   	      <div class="blog__details">
   	      	<h2>{{ article.title }}</h2></a>
