@@ -1,0 +1,25 @@
+{% comment %}
+  Very important reading:
+  http://docs.shopify.com/themes/liquid-basics/what-is-true-and-false-in-liquid
+  Learn how to read theme settings in your theme.
+{% endcomment %}
+{{ pages.recipes.content }}
+<section>
+  <div class="section__content blog__list">
+  	<div class="fluid-container">
+  	  {% assign blog = blogs.recipes %}
+  	  {% for article in blogs.recipes.articles limit: 3 %}
+
+  	    <div class="fluid-item one-thirds column article">
+
+  	      <p class="blog-list__image"><a href="{{ article.url }}"><img src="{{ article | img_url: 'master' }}" /></p>
+  	      <div class="blog__details">
+  	      	<h2>{{ article.title }}</h2></a>
+  	        	<p>{{ article.excerpt }}</p>
+  	        	<p><a class="blog__read-more" href="{{ article.url }}">{{ 'blogs.article.read_more' | t }}</a></p>
+  	      </div>
+  	    </div>
+  	  {% endfor %}
+  	</div>
+  </div>
+</section>
