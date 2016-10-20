@@ -117,8 +117,10 @@ p.round {
   z-index: 0;
 
   span {
-    display:table-cell;
-    padding-top: 5px;
+    display: table-cell;
+    line-height: 1.35;
+    padding-left: 3px;
+    padding-top: 0;
     vertical-align:middle;
   }
 }
@@ -137,6 +139,16 @@ a {
   &:hover {
     color: $brand-blue;
     transition: color $base-duration $base-timing;
+  }
+
+  p.round {
+    @include transition(all 0.2s linear);
+    
+    &:hover {
+      background: $brand-orange;
+      color: $white;
+      @include transition(all 0.2s linear);
+    }
   }
 }
 
