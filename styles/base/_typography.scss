@@ -193,3 +193,19 @@ hr {
     width: 75%;
   }
 }
+
+.link__lists { 
+
+  a {
+    display: block;
+    font-family: $base-font-family;
+    font-size: 1rem;
+    letter-spacing: 0;
+    padding: 0.75rem 0;
+    text-transform: none;
+
+    @include media($medium-screen) {
+      font-size: 1.15rem;
+    }
+  }
+}
