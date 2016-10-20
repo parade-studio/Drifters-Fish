@@ -12,7 +12,15 @@
     padding: 1rem 0;
 
     @include media($medium-screen) {
+      margin-bottom: 1.75rem;
       padding: 0.5rem;
+    }
+
+    &:nth-child(3n+3) {
+      margin-right: 0 !important;
+    }
+    &:nth-child(3n+4) {
+      clear: both;
     }
   }
 }
@@ -102,6 +110,7 @@
 
   .article__back small {
     border-bottom: 1px solid $brand-orange;
+    clear: both;
     color: $brand-orange;
     display: inline-block;
     opacity: 1;
