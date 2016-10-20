@@ -2,6 +2,16 @@ section {
   position: relative;
 }
 
+.section__content.page__title {
+  padding-bottom: #{3.25 * flex-gutter()};
+  padding-top: #{2.75 * flex-gutter()};
+
+  @include media($medium-screen) {
+    padding-bottom: #{1.25 * flex-gutter()};
+    padding-top: #{1 * flex-gutter()};
+  }
+}
+
 .section__content {
   @include outer-container;
   @include pad(#{2.75 * flex-gutter()});
