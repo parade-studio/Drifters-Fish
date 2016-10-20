@@ -1,0 +1,11 @@
+.instagram__feed {
+  .iframe__cropper {
+    height: 675px;
+    overflow: hidden;
+  }
+
+  iframe {
+    overflow-y: hidden;
+    pointer-events: none;
+  }
+}
