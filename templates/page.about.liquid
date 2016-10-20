@@ -6,70 +6,14 @@
 <div class="section__content page__title">
 </div>
 <section class="section--half section--middle">
+
   <div class="section__content">
     <div class="three-quarters">
-      <h1 class="text-left padded">A little sleep, a little slumber, a little folding of the hands to rest.</h1>
+      <h1 class="text-left padded">Lorem ipsum dolor sit amet — sit dolor ipsum lorem.</h1>
     </div>
     <div class="one-quarters df-seal">
       {{ 'df-seal.svg' | asset_url | img_tag }}
     </div>
   </div>
 </section>
-
-<section>
-  <div class="section__content">
-    <div>
-      <div class="one-thirds">
-        <img src="http://placehold.it/500?text=mugshot" />
-      </div>
-      <div class="two-thirds">
-        <h2>Michael Hand</h2>
-        <small>Founder &amp; Fisherman</small>
-        <p class="short-description">Lorem ipsum Commodo proident consectetur minim sit nulla esse mollit cillum nulla dolore tempor deserunt ex pariatur dolor veniam in qui cupidatat reprehenderit occaecat fugiat amet aute.</p>
-      </div>
-    </div>
-    <div class="section__link">
-      <a href="mailto:michael@driftersfish.com">michael@driftersfish.com</a>
-    </div>
-  </div>
-</section>
-
-<section class="section--full-width snow-background">
-  <div class="section__content">
-    <div>
-      <div class="one-thirds">
-        <img src="http://placehold.it/500?text=mugshot" />
-      </div>
-      <div class="two-thirds">
-        <h2>Nelly Hand</h2>
-        <small>Founder &amp; Fisherman</small>
-        <p class="short-description">Lorem ipsum Sint Excepteur in veniam commodo velit tempor fugiat eiusmod ut Duis ut dolor elit elit exercitation eiusmod occaecat tempor ullamco commodo magna in sint.</p>
-      </div>
-    </div>
-    <div class="section__link">
-      <a href="mailto:nelly@driftersfish.com">nelly@driftersfish.com</a>
-    </div>
-  </div>
-</section>
-
-<section class="solitude-background">
-  <div class="section__content">
-    <div>
-      <div class="full">
-        <div class="one-quarters text-left">
-          <small class="metadata">OUR ALASKA</small>
-        </div>
-        <div class="three-fourths text-left">
-          <h3>Our home, Cordova Alaska</h3>
-        </div>
-      </div>
-      <img src="{{ 'alaska1.png' | asset_url }}" alt="Alaska" />
-      <div class="three-fourths shift-one-quarters">
-        <h4 class="padded bottom">There’s an incredibly supportive, beautiful fishing community that we have the pleasure of being a part of six months of the year. Together we all practice a responsible, sustainable way of fishing, which we feel honors the bounty the ocean graciously provides for us.</h4>
-      </div>
-    </div>
-    <div class="section__link">
-      <a href="https://www.google.com/maps/place/Cordova,+AK" target="_blank">see on google maps</a>
-    </div>
-  </div>
-</section>
+{{ pages.about-us.content }}
