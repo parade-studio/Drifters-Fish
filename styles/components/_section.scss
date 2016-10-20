@@ -7,8 +7,8 @@ section {
   padding-top: #{2.75 * flex-gutter()};
 
   @include media($medium-screen) {
-    padding-bottom: #{1.25 * flex-gutter()};
-    padding-top: #{1 * flex-gutter()};
+    padding-bottom: #{2 * flex-gutter()};
+    padding-top: #{1.5 * flex-gutter()};
   }
 }
 
