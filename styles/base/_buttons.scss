@@ -1,4 +1,4 @@
-#{$all-buttons}, #contactFormSubmit {
+#{$all-buttons}, #contactFormSubmit, a.button {
   appearance: none;
   background-color: transparent;
   border: 1px solid $action-color;
@@ -10,9 +10,10 @@
   font-size: modular-scale(-2);
   -webkit-font-smoothing: antialiased;
   font-weight: 500;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.2rem;
   min-width: 250px;
   padding: $base-spacing/1.2;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   user-select: none;
