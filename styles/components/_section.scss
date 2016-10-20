@@ -143,9 +143,12 @@ section {
 }
 
 .section__link__normal {
+  margin: 3.5rem auto 0;
+
   a {
     border-bottom: 1px solid $action-color;
     display: inline-block;
+    font-size: modular-scale(-2);
     letter-spacing: 0.25rem;
     @include transition(all 0.2s ease);
 
