@@ -398,6 +398,17 @@ hr {
     .short-description {
       width: 75%; } }
 
+.link__lists a {
+  display: block;
+  font-family: "DomaineTextWeb-Light";
+  font-size: 1rem;
+  letter-spacing: 0;
+  padding: 0.75rem 0;
+  text-transform: none; }
+  @media screen and (min-width: 600px) {
+    .link__lists a {
+      font-size: 1.15rem; } }
+
 header {
   position: fixed;
   top: 0;
@@ -1234,6 +1245,9 @@ footer {
     @media screen and (min-width: 600px) {
       .template-article .article__feature img {
         height: 50vh; } }
+
+.recipes__block {
+  padding-bottom: 0 !important; }
 
 .alabaster-background {
   background-color: #FCFCFA; }
