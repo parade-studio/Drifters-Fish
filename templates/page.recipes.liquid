@@ -3,13 +3,12 @@
   http://docs.shopify.com/themes/liquid-basics/what-is-true-and-false-in-liquid
   Learn how to read theme settings in your theme.
 {% endcomment %}
+{{ pages.recipes.content }}
 <section>
-  <div class="section__content page__title">
-  </div>
   <div class="section__content blog__list">
   	<div class="fluid-container">
   	  {% assign blog = blogs.recipes %}
-  	  {% for article in blogs.recipes.articles %}
+  	  {% for article in blogs.recipes.articles limit: 3 %}
 
   	    <div class="fluid-item one-thirds column article">
 
