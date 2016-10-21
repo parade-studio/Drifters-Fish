@@ -53,6 +53,22 @@ button, [type='button'], [type='reset'], [type='submit'], #contactFormSubmit, a.
     #contactFormSubmit {
       width: 50%; } }
 
+a.button {
+  border: 1px solid #FC7523;
+  color: #FC7523;
+  display: inline-block;
+  font-size: 0.512em;
+  padding: 0.86111em;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  transition: all 0.2s ease; }
+  @media screen and (min-width: 600px) {
+    a.button {
+      font-size: 0.64em;
+      margin-top: 1.5rem;
+      width: 250px; } }
+
 fieldset {
   background-color: transparent;
   border: 0;
@@ -1397,13 +1413,17 @@ footer {
 .recipes__block {
   padding-bottom: 0 !important; }
 
-.instagram__feed .iframe__cropper {
-  height: 675px;
-  overflow: hidden; }
-
-.instagram__feed iframe {
-  overflow-y: hidden;
-  pointer-events: none; }
+.instagram__feed {
+  margin: 0 auto; }
+  @media screen and (min-width: 600px) {
+    .instagram__feed {
+      margin: 2.4rem auto 0; } }
+  .instagram__feed .iframe__cropper {
+    height: 675px;
+    overflow: hidden; }
+  .instagram__feed iframe {
+    overflow-y: hidden;
+    pointer-events: none; }
 
 .alabaster-background {
   background-color: #FCFCFA; }
@@ -1717,24 +1737,28 @@ footer {
 #about-us .df-seal {
   z-index: 8; }
 
-#contact {
-  padding-bottom: 98px; }
-  #contact .one-half h2 {
-    margin-bottom: 0.25833em; }
-  #contact .one-half p {
-    font-size: 1.1rem; }
-    #contact .one-half p a {
-      font-size: 0.78rem; }
-  #contact .one-half small {
-    margin-top: 1.86em; }
-  #contact .section__link {
-    margin-top: 0.775em; }
-    @media screen and (min-width: 600px) {
-      #contact .section__link {
-        margin-top: 0; } }
-  #contact .full .one-quarters {
-    margin-bottom: 0; }
-  #contact .short-description {
-    margin-top: 4.12589%; }
-  #contact form input[type="submit"] {
-    margin-top: 1.2rem; }
+#contact .one-half h2 {
+  margin-bottom: 0.25833em; }
+
+#contact .one-half p {
+  font-size: 1.1rem; }
+  #contact .one-half p a {
+    font-size: 0.78rem; }
+
+#contact .one-half small {
+  margin-top: 1.86em; }
+
+#contact .section__link {
+  margin-top: 0.775em; }
+  @media screen and (min-width: 600px) {
+    #contact .section__link {
+      margin-top: 0; } }
+
+#contact .full .one-quarters {
+  margin-bottom: 0; }
+
+#contact .short-description {
+  margin-top: 4.12589%; }
+
+#contact form input[type="submit"] {
+  margin-top: 1.2rem; }
