@@ -1,0 +1,166 @@
+footer {
+  position: relative !important;
+  bottom: 0;
+  background-color: $white;
+  width: 100%;
+}
+
+.section--footer {
+  background: $blue-dark;
+  height: auto;
+  padding-bottom: 2rem;
+
+  .newsletter__form {
+    height: 210px;
+    margin-bottom: 3.5rem;
+    position: relative;
+
+    @include media($medium-screen) {
+      height: 300px;
+      margin-bottom: 0;
+    }
+  }
+
+  .contact__details {
+    height: 250px;
+    position: relative;
+
+    @include media($medium-screen) {
+      height: 300px;
+    }
+  }
+
+  .contact--line {
+    position: absolute;
+    bottom: 0;
+  }
+
+  h2 {
+    color: #fff;
+    font-family: $base-font-family;
+    font-size: modular-scale(1);
+    font-weight: 200;
+    width: 100%;
+
+    @include media($medium-screen) {
+      font-size: modular-scale(2);
+      width: 90%;
+    }
+  }
+
+  small {
+    color: $blue-gray;
+    font-family: 'Simplon Mono Trial';
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  ul {
+    border-top: 1px dotted $blue-gray;
+    margin: 0.5rem 0 0;
+    padding: 0;
+
+    @include media($medium-screen) {
+      margin: 1.75rem 0 0;
+    }
+  }
+
+  li {
+    border-bottom: 1px dotted $blue-gray;
+    color: #fff;
+    font-family: $base-font-family;
+    font-size: 1.2rem;
+    font-weight: 200;
+    list-style-type: none;
+    padding: 1rem 0;
+
+    a {
+      color: #fff;
+      font-family: $base-font-family;
+      letter-spacing: 0;
+      text-decoration: none;
+      text-transform: none;
+    }
+  }
+
+  form {
+    input[type="email"]::-webkit-input-placeholder {
+      color: $blue-gray;
+      font-family: $base-font-family;
+      font-size: inherit;
+      letter-spacing: 0;
+      margin: 0;
+      opacity: 0.4;
+      padding: 0;
+      text-transform: none;
+      width: 100%;
+
+      @include media($medium-screen) {
+        font-size: inherit;
+      }
+    }
+
+    input[type="email"] {
+      background-color: transparent;
+      border: 0;
+      border-bottom: 1px dotted $blue-gray;
+      border-radius: none;
+      box-shadow: none;
+      box-sizing: border-box;
+      color: $blue-gray;
+      height: auto;
+      float: left;
+      font-family: $base-font-family;
+      font-size: modular-scale(-1);
+      font-weight: 100;
+      margin-bottom: 0;
+      padding: 0.5rem 0;
+      position: absolute;
+      bottom: 0;
+      transition: border-color $base-duration $base-timing;
+      width: 100%;
+      transition: all 0.2s linear;
+
+      @include media($medium-screen) {
+        font-size: modular-scale(2);
+        margin-bottom: 0.25rem;
+      }
+    }
+
+    input[type="submit"] {
+      background: transparent;
+      border: none;
+      color: $brand-orange;
+      font-family: 'Simplon Mono Trial';
+      font-size: modular-scale(-3);
+      letter-spacing: 0.15rem;
+      min-width: 50px;
+      opacity: 0.3;
+      padding: 0.65rem 0;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      text-transform: uppercase;
+      transition: opacity 0.2s linear;
+
+      @include media($medium-screen) {
+        font-size: modular-scale(-2);
+        min-width: 70px;
+        padding: 1.15rem 0;
+      }
+    }
+
+    input[type="email"]:focus {
+      box-shadow: none;
+      border-bottom: 1px dotted #999;
+      outline: none;
+      transition: all 0.2s linear;
+    }
+
+    input[type="email"]:focus + input[type="submit"] {
+      cursor: pointer;
+      opacity: 1;
+      transition: opacity 0.2s linear;
+    }
+  }
+}
