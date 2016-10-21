@@ -425,7 +425,7 @@ header {
   top: 0;
   right: 0;
   left: 0;
-  height: 100%;
+  height: auto;
   pointer-events: auto;
   z-index: 10; }
   @media screen and (min-width: 600px) {
@@ -479,7 +479,7 @@ nav {
         font-size: 0.68rem;
         letter-spacing: 0.2rem;
         margin: 2.3rem auto;
-        width: 19.5vw; }
+        width: 100%; }
         .nav__links a:hover {
           color: #999 !important;
           -spec-transition: color 0.25s ease;
@@ -599,6 +599,11 @@ nav .seal {
       margin: 0;
       top: auto;
       width: 100%; } }
+  .nav__container .desktop-only ul {
+    margin: 0 auto;
+    max-width: 1550px; }
+    .nav__container .desktop-only ul li {
+      width: 20%; }
 
 @keyframes animatedBackground {
   from {
@@ -849,21 +854,135 @@ section {
   .secondary-link:hover {
     color: #a6a6a6; }
 
-.section--signature {
-  display: none; }
+footer {
+  position: relative !important;
+  bottom: 0;
+  background-color: #fff;
+  width: 100%; }
 
-#drifters-fish .section--signature, #about-us .section--signature {
-  background-color: #021D2C;
-  color: #fff;
-  text-align: center; }
-  #drifters-fish .section--signature .section__content, #about-us .section--signature .section__content {
-    padding-bottom: 0; }
-  #drifters-fish .section--signature .logo, #about-us .section--signature .logo {
-    margin-bottom: 30px;
-    width: 150px; }
-  #drifters-fish .section--signature .signature, #about-us .section--signature .signature {
-    max-width: 800px;
-    width: 90%; }
+.section--footer {
+  background: #001d2d;
+  height: auto;
+  padding-bottom: 2rem; }
+  .section--footer .newsletter__form {
+    height: 210px;
+    margin-bottom: 3.5rem;
+    position: relative; }
+    @media screen and (min-width: 600px) {
+      .section--footer .newsletter__form {
+        height: 300px;
+        margin-bottom: 0; } }
+  .section--footer .contact__details {
+    height: 250px;
+    position: relative; }
+    @media screen and (min-width: 600px) {
+      .section--footer .contact__details {
+        height: 300px; } }
+  .section--footer .contact--line {
+    position: absolute;
+    bottom: 0; }
+  .section--footer h2 {
+    color: #fff;
+    font-family: "DomaineTextWeb-Light";
+    font-size: 1.25em;
+    font-weight: 200;
+    width: 100%; }
+    @media screen and (min-width: 600px) {
+      .section--footer h2 {
+        font-size: 1.5625em;
+        width: 90%; } }
+  .section--footer small {
+    color: #606e76;
+    font-family: 'Simplon Mono Trial';
+    letter-spacing: 0.15em;
+    text-transform: uppercase; }
+  .section--footer ul {
+    border-top: 1px dotted #606e76;
+    margin: 0.5rem 0 0;
+    padding: 0; }
+    @media screen and (min-width: 600px) {
+      .section--footer ul {
+        margin: 1.75rem 0 0; } }
+  .section--footer li {
+    border-bottom: 1px dotted #606e76;
+    color: #fff;
+    font-family: "DomaineTextWeb-Light";
+    font-size: 1.2rem;
+    font-weight: 200;
+    list-style-type: none;
+    padding: 1rem 0; }
+    .section--footer li a {
+      color: #fff;
+      font-family: "DomaineTextWeb-Light";
+      letter-spacing: 0;
+      text-decoration: none;
+      text-transform: none; }
+  .section--footer form input[type="email"]::-webkit-input-placeholder {
+    color: #606e76;
+    font-family: "DomaineTextWeb-Light";
+    font-size: inherit;
+    letter-spacing: 0;
+    margin: 0;
+    opacity: 0.4;
+    padding: 0;
+    text-transform: none;
+    width: 100%; }
+    @media screen and (min-width: 600px) {
+      .section--footer form input[type="email"]::-webkit-input-placeholder {
+        font-size: inherit; } }
+  .section--footer form input[type="email"] {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px dotted #606e76;
+    border-radius: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #606e76;
+    height: auto;
+    float: left;
+    font-family: "DomaineTextWeb-Light";
+    font-size: 0.8em;
+    font-weight: 100;
+    margin-bottom: 0;
+    padding: 0.5rem 0;
+    position: absolute;
+    bottom: 0;
+    transition: border-color 300ms ease-in-out;
+    width: 100%;
+    transition: all 0.2s linear; }
+    @media screen and (min-width: 600px) {
+      .section--footer form input[type="email"] {
+        font-size: 1.5625em;
+        margin-bottom: 0.25rem; } }
+  .section--footer form input[type="submit"] {
+    background: transparent;
+    border: none;
+    color: #FC7523;
+    font-family: 'Simplon Mono Trial';
+    font-size: 0.512em;
+    letter-spacing: 0.15rem;
+    min-width: 50px;
+    opacity: 0.3;
+    padding: 0.65rem 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-transform: uppercase;
+    transition: opacity 0.2s linear; }
+    @media screen and (min-width: 600px) {
+      .section--footer form input[type="submit"] {
+        font-size: 0.64em;
+        min-width: 70px;
+        padding: 1.15rem 0; } }
+  .section--footer form input[type="email"]:focus {
+    box-shadow: none;
+    border-bottom: 1px dotted #999;
+    outline: none;
+    transition: all 0.2s linear; }
+  .section--footer form input[type="email"]:focus + input[type="submit"] {
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.2s linear; }
 
 .section--intro {
   text-align: center; }
