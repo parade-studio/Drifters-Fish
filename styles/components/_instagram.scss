@@ -1,11 +1,17 @@
 .instagram__feed {
-  .iframe__cropper {
-    height: 675px;
-    overflow: hidden;
-  }
+	margin: 0 auto;
 
-  iframe {
-    overflow-y: hidden;
-    pointer-events: none;
-  }
+	@include media($medium-screen) {
+		margin: 2.4rem auto 0;
+	}
+
+  	.iframe__cropper {
+    	height: 675px;
+    	overflow: hidden;
+  	}
+
+  	iframe {
+    	overflow-y: hidden;
+    	pointer-events: none;
+  	}
 }
