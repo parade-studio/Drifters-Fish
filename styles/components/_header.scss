@@ -1,6 +1,6 @@
 header {
   @include position(fixed, 0 0 null 0);
-  height: 100%;
+  height: auto;
   pointer-events: auto;
   z-index: 10;
 
@@ -63,7 +63,7 @@ nav {
       font-size: 0.68rem;
       letter-spacing: 0.2rem;
       margin: 2.3rem auto;
-      width: 19.5vw;
+      width: 100%;
 
       &:hover {
         color: #999 !important;
@@ -207,6 +207,16 @@ nav .seal {
     margin: 0;
     top: auto;
     width: 100%;
+  }
+  .desktop-only {
+    ul {
+      margin: 0 auto;
+      max-width: 1550px;
+
+      li {
+        width: 20%
+      }
+    }
   }
 }
 
