@@ -31,11 +31,16 @@
 
   h2 {
     color: $brand-blue;
-    font-size: 2.1rem;
+    font-size: modular-scale(1);
     letter-spacing: 0;
+    line-height: 1.2;
     margin-bottom: 0.5rem;
     text-align: center;
-    text-transform: capitalize;
+    text-transform: none;
+
+    @include media($medium-screen) {
+      font-size: modular-scale(2)
+    }
   }
 
   p {
@@ -49,6 +54,11 @@
 
 .blog__read-more {
   padding-bottom: 0.1rem;
+  font-size: modular-scale(-2);
+
+  @include media($medium-screen) {
+    font-size: modular-scale(-2)
+  }
 }
 
 .blog-list__image {
@@ -81,15 +91,11 @@
   .article__all {
     margin: 0 auto;
     padding-top: 0;
-    width: 95vw;
-
-    @include media($medium-screen) {
-      max-width: 950px;
-      width: 65vw;
-    }
 
     h2 {
       font-size: 1.85rem;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
 
       @include media($medium-screen) {
         font-size: 2.5rem;
@@ -104,6 +110,29 @@
       @include media($medium-screen) {
         font-size: 1.1rem;
         line-height: 1.6;
+      }
+
+      em {
+        color: $medium-gray;
+        font-size: modular-scale(-1);
+      }
+    }
+
+    small {
+      font-size: modular-scale(-3);
+    }
+
+    ul {
+      margin: 0.5rem 0 2rem 1.5rem;
+
+      li {
+        font-size: modular-scale(-1);
+        padding: 0.25rem 0;
+
+        &:before {
+          content: "\2013 ";
+          padding-right: 0.35rem;
+        }
       }
     }
   }
@@ -125,20 +154,21 @@
     }
   }
   .article__feature {
-    padding-top: 0;
+    padding-bottom: 2rem;
 
     @include media($medium-screen) {
-      padding-top: #{1.75 * flex-gutter()};
+      padding-bottom: 0;
     }
     img {
       display: block;
-      height: 400px;
-      object-fit: cover;
+      height: auto;
+      object-fit: contain;
       object-position: 50% 50%;
       overflow: hidden;
+      width: 100%;
 
       @include media($medium-screen) {
-        height: 50vh;
+          width: 95%;
       }
     }
   }
