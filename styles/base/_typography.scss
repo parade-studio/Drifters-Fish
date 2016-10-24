@@ -49,6 +49,16 @@ h4 {
   }
 }
 
+h6 {
+  color: $brand-orange;
+  font-family: 'Simplon Mono';
+  font-size: modular-scale(-3);
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
 p {
   font-size: modular-scale(-1);
   font-weight: 100;
