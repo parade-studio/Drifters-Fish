@@ -8,3 +8,13 @@ picture {
   max-width: 100%;
   width: 100%;
 }
+
+.contact__photo {
+	img {
+		width: 100%;
+
+		@include media($medium-screen) {
+			width: 95%;
+		}
+	}
+}
