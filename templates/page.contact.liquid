@@ -7,10 +7,10 @@
   <div class="section__content page__title">
   </div>
   <div class="section__content">
-    <div class="one-half">
+    <div class="two-thirds">
       <p>Placeholder</p>
     </div>
-    <div class="one-half">
+    <div class="one-thirds">
       <h2>Get in touch</h2>
       <p>Please contact us if you have any questions.</p>
       <small>Email</small>
@@ -19,11 +19,13 @@
       <p><a class="no-border-bottom">907.317.2958</a></p>
     </div>
   </div>
+</section>
+<section class="snow-background">
   <div class="section__content">
-    <div class="one-half">
-      <p>Placeholder</p>
+    <div class="two-thirds">
+      <p class="contact__photo">{{ 'frozen-fish.jpg' | asset_url | img_tag }}</p>
     </div>
-    <div class="one-half">
+    <div class="one-thirds">
       <h2>Wholesale Inqueries</h2>
         <p>Our fish is available fresh or frozen to your market or restaurant. We would love to work with you to give your customers a direct relationship to the fish on their plate.</p>
         {% form 'contact' %}
