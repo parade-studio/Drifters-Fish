@@ -1,0 +1,42 @@
+<section>
+  <div class="section__content page__title">
+    <!-- <small>{{ collection.title }}</small> -->
+  </div>
+  <div class="section__content">
+    <div class="full">
+      <h1>{{ collection.title }}</h1>
+      <h4 class="subline">Bringing good fish to Anacortes, Bellingham, + Seattle</h4>
+    </div>
+  </div>
+</section>
+
+<section class="section--full alabaster-background">
+  <div class="section__content">
+    {% for product in collection.products %}
+      {% include 'product-item' %}
+    {% else %}
+      <div class="full">
+        <p>There are no products in this view.</p>
+      </div>
+    {% endfor %}
+
+    {% if paginate.pages > 1 %}
+      <div class="full">
+        {{ paginate | default_pagination }}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<section class="section--full">
+  <div class="section__content">
+    <div class="one-thirds text-left">
+      {% if collection.description.size > 0 %}
+        <p>{{ collection.description }}</p>
+      {% endif %}
+    </div>
+    <div class="one-half shift-one-sixths">
+      <img src="{{ 'shares-01.jpg' | asset_url }}" alt="" />
+    </div>
+  </div>
+</section>
