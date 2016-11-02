@@ -61,3 +61,9 @@
     @include shift(3);
   }
 }
+.shift-two-thirds {
+  @include shift(0);
+  @include media($medium-screen) {
+    @include shift(8);
+  }
+}
