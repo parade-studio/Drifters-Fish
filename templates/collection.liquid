@@ -4,8 +4,9 @@
   </div>
   <div class="section__content">
     <div class="full">
+      <h2>{{ collection.title }}</h2>
       {% if collection.description.size > 0 %}
-        <h2>{{ collection.description }}</h2>
+        <p>{{ collection.description }}</p>
       {% endif %}
     </div>
   </div>
@@ -20,11 +21,5 @@
         <p>There are no products in this view.</p>
       </div>
     {% endfor %}
-
-    {% if paginate.pages > 1 %}
-      <div class="full">
-        {{ paginate | default_pagination }}
-      </div>
-    {% endif %}
   </div>
 </section>
