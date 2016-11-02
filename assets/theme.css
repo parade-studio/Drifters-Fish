@@ -451,6 +451,15 @@ hr {
     .link__lists a {
       font-size: 1.15rem; } }
 
+.link__inline {
+  font-family: "DomaineTextWeb-Light" !important;
+  font-size: inherit;
+  letter-spacing: 0;
+  text-transform: none; }
+
+.text-gray {
+  color: #999; }
+
 header {
   position: fixed;
   top: 0;
@@ -1616,6 +1625,12 @@ footer {
     .shift-one-quarters {
       margin-left: 25.58941%; } }
 
+.shift-two-thirds {
+  margin-left: 0%; }
+  @media screen and (min-width: 600px) {
+    .shift-two-thirds {
+      margin-left: 68.23843%; } }
+
 .desktop-only {
   display: none; }
   @media screen and (min-width: 600px) {
@@ -1638,6 +1653,9 @@ footer {
   clear: both;
   margin: 0 auto;
   text-align: center; }
+
+.float-right {
+  float: right; }
 
 #logo img {
   margin-top: -3em; }
