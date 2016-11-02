@@ -231,3 +231,14 @@ hr {
     }
   }
 }
+
+.link__inline {
+  font-family: $base-font-family !important;
+  font-size: inherit;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.text-gray {
+  color: $medium-gray;
+}
