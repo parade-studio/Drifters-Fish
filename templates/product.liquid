@@ -41,6 +41,8 @@
             </p>
           </div>
 
+          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" />
+
           <!-- <div id="product-variants" {% if hide_default_title %} class="hidden"{% endif %}>
             <select id="product-select" name="id">
             {% for variant in product.variants %}
@@ -63,7 +65,7 @@
             <input type="submit" name="add" id="add" value="{{ add_to_cart | escape }}">
           </div>
 
-          {% if collection %}            
+          {% if collection %}
             <a href="{{ collection.url }}" title="Back to the {{ collection.title }} collection page" class="secondary-link">&#8592; Go Back</a>
           {% endif %}
 
