@@ -68,3 +68,41 @@ a.button {
     width: 250px;
   }
 }
+
+a.button-round {
+  border: 1px solid #FC7523;
+  color: #FC7523;
+  display: inline-block;
+  font-size: modular-scale(-3);
+  padding: $base-spacing/1.8;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  transition: all 0.2s ease;
+
+  @include media($medium-screen) {
+    border: 2px solid $action-color;
+    border-radius: 100px;
+    display: table;
+    color: $action-color;
+    height: 100px;
+    font-family: 'Simplon Mono';
+    letter-spacing: 0.25rem;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+    top: 0;
+    width: 100px;
+    z-index: 0;
+
+    span {
+      display: table-cell;
+      font-size: modular-scale(0);
+      line-height: 1.35;
+      padding-left: 3px;
+      padding-top: 0;
+      vertical-align:middle;
+    }
+  }
+}
