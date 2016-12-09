@@ -166,6 +166,10 @@ nav a {
   &:hover {
     color: $action-color;
   }
+
+  &.active {
+    color: $brand-orange;
+  }
 }
 
 nav .logo {
