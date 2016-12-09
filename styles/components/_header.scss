@@ -262,6 +262,11 @@ nav .seal {
   @include media($medium-screen) {
     display: none;
   }
+
+  a {
+    border: none;
+    text-decoration: none;
+  }
 }
 
 nav.open + p.mobile__logo {
