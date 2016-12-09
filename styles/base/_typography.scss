@@ -218,5 +218,9 @@ hr {
 
 .subline {
   color: darken($solitude, 15%);
-  margin-top: -0.75em;
+  margin-top: 0.2rem;
+  
+  @include media($medium-screen) {
+    margin-top: -0.75rem;
+  }
 }
