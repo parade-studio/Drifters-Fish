@@ -479,7 +479,10 @@ hr {
 
 .subline {
   color: #afc9df;
-  margin-top: -0.75em; }
+  margin-top: 0.2rem; }
+  @media screen and (min-width: 600px) {
+    .subline {
+      margin-top: -0.75rem; } }
 
 header {
   position: fixed;
@@ -943,7 +946,7 @@ footer {
   height: auto;
   padding-bottom: 2rem; }
   .section--footer .newsletter__form {
-    height: 210px;
+    height: 275px;
     margin-bottom: 3.5rem;
     position: relative; }
     @media screen and (min-width: 600px) {
