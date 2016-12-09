@@ -251,6 +251,17 @@ nav .seal {
   to { background-position: 30px 0px; }
 }
 
+.mobile__cart {
+  @include position(absolute, 0 0 0 0);
+  padding: 1.65em;
+  
+  a {
+    border: none;
+    text-decoration: none;
+    transition: color $base-timing $base-duration;
+  }
+}
+
 .mobile__logo {
   @include position(absolute, 0 0 null 0);
   margin: 0 auto;
@@ -275,6 +286,12 @@ nav.open + p.mobile__logo {
 }
 
 .nav_open {
+  .mobile__cart {
+    a {
+      color: $white;
+      transition: color $base-timing $base-duration;
+    }
+  }
   .nav__trigger {
     &::after {
       @include position(absolute, null 0 8% 0);
