@@ -51,10 +51,14 @@
 			background-size: auto 40px;
 		}
 
+		&.fifteen {
+			background: transparent url("15.svg") no-repeat 100% 70%;
+			background-size: auto 40px;
+		}
+
 		&.twenty {
 			background: transparent url("20.svg") no-repeat 100% 70%;
 			background-size: auto 40px;
-
 		}
 	}
 
@@ -144,6 +148,7 @@
 		margin: $base-spacing/1.5 0;
 
 		select {
+			background: $alabaster;
 			border: none;
 			border-radius: 0;
 			box-shadow: none;
