@@ -7,19 +7,22 @@
       </a>
       <div class="nav__links desktop-only">
         <ul>
-          <li class="first">
+          <li>
             <a href="/pages/buy" class="{% if link.active %}active{% endif %}">Shop Salmon</a>
+            {% if cart.item_count >= 1 %}
+              <span><a href="/cart" class="cart-count">({{ cart.item_count }})</a></span>
+            {% endif %}
           </li>
-          <li class="">
-            <a href="/pages/about-us" class="{% if link.active %}active{% endif %}">Know Your Fisherman</a>
+          <li>
+            <a href="/pages/about-us" {% if link.active %}class="active"{% endif %}>Know Your Fisherman</a>
           </li>
           <li class="desktop-only">
             <a href="/" class="home">{{ 'df-logo-straight-blue.svg' | asset_url | img_tag: null, 'logo' }}</a>
           </li>
-          <li class="">
+          <li>
             <a href="/pages/around-the-table" class="{% if link.active %}active{% endif %}">Around the Table</a>
           </li>
-          <li class="{% if link.active %}active{% endif %}">
+          <li>
             <a href="/pages/contact" class="{% if link.active %}active{% endif %}">Contact Us</a>
           </li>
         </ul>
@@ -34,6 +37,11 @@
         </ul>
     </div>
   </nav>
+  <p class="mobile__cart mobile-only">
+    {% if cart.item_count >= 1 %}
+      <span><a href="/cart" class="cart-count">({{ cart.item_count }})</a></span>
+    {% endif %}
+  </p>
   <p class="mobile__logo"><a href="/" class="mobile-only">{{ 'df-logo-straight-blue.svg' | asset_url | img_tag }}</a>
   <p class="nav__trigger"></p>
 </header>
