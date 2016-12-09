@@ -333,7 +333,7 @@ h1 {
       font-size: 2.44141em; } }
 
 h2 {
-  font-size: 1.25em;
+  font-size: 1.4rem;
   line-height: 1.4; }
   @media screen and (min-width: 600px) {
     h2 {
@@ -699,6 +699,9 @@ nav .seal {
   @media screen and (min-width: 600px) {
     .mobile__logo {
       display: none; } }
+  .mobile__logo a {
+    border: none;
+    text-decoration: none; }
 
 nav.open + p.mobile__logo {
   opacity: 0;
