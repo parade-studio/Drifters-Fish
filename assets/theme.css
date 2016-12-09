@@ -217,6 +217,12 @@ textarea {
     padding-top: 0.51667em; }
   textarea::placeholder {
     padding-top: 0.51667em; }
+  textarea.field-notes {
+    background: #FCFCFA;
+    border-bottom: none;
+    font-size: 0.8em;
+    margin-bottom: 1rem;
+    padding: 0.75rem 1rem 1rem; }
 
 [type="search"] {
   -webkit-appearance: none;
@@ -610,6 +616,8 @@ nav a {
   font-family: 'Simplon Mono'; }
   nav a:hover {
     color: #FC7523; }
+  nav a.active {
+    color: #FC7523; }
 
 nav .logo {
   margin: 1.25rem auto;
@@ -934,6 +942,17 @@ footer {
       .section--footer .newsletter__form {
         height: 300px;
         margin-bottom: 0; } }
+    .section--footer .newsletter__form #mc_embed_signup .mce_inline_error {
+      background: transparent;
+      color: #606e76;
+      padding: 0.5rem 0 0; }
+    .section--footer .newsletter__form #mc_embed_signup #mce-success-response {
+      background: #001623;
+      color: white;
+      padding: 0.75rem 1rem 1rem;
+      position: absolute;
+      bottom: 0;
+      width: 100%; }
   .section--footer .contact__details {
     height: 250px;
     position: relative; }
@@ -978,7 +997,11 @@ footer {
       font-family: "DomaineTextWeb-Light";
       letter-spacing: 0;
       text-decoration: none;
-      text-transform: none; }
+      text-transform: none;
+      transition: color 300ms ease-in-out; }
+      .section--footer li a:hover {
+        color: #FC7523;
+        transition: color 300ms ease-in-out; }
   .section--footer form input[type="email"]::-webkit-input-placeholder {
     color: #606e76;
     font-family: "DomaineTextWeb-Light";
@@ -1204,6 +1227,9 @@ footer {
     .product--container .product--details.ten {
       background: transparent url("10.svg") no-repeat 100% 70%;
       background-size: auto 40px; }
+    .product--container .product--details.fifteen {
+      background: transparent url("15.svg") no-repeat 100% 70%;
+      background-size: auto 40px; }
     .product--container .product--details.twenty {
       background: transparent url("20.svg") no-repeat 100% 70%;
       background-size: auto 40px; }
@@ -1269,6 +1295,7 @@ footer {
 .product--page #product--variants {
   margin: 1.03333em 0; }
   .product--page #product--variants select {
+    background: #FCFCFA;
     border: none;
     border-radius: 0;
     box-shadow: none;
