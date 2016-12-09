@@ -524,7 +524,15 @@ nav {
   z-index: 10; }
   @media screen and (min-width: 600px) {
     .nav__links li {
-      float: left; } }
+      float: left; }
+      .nav__links li:nth-of-type(1) span {
+        position: relative; }
+    .nav__links a[href="/cart"] {
+      color: #FC7523;
+      letter-spacing: 0.15rem;
+      position: absolute;
+      right: 2.75rem;
+      top: 0; } }
   .nav__links a {
     color: transparent;
     display: inline-block;
