@@ -19,6 +19,23 @@ footer {
       height: 300px;
       margin-bottom: 0;
     }
+
+    #mc_embed_signup {
+      .mce_inline_error {
+        background: transparent;
+        color: $blue-gray;
+        padding: 0.5rem 0 0;
+      }
+
+      #mce-success-response {
+        background: darken($blue-dark, 2%);
+        color: white;
+        padding: 0.75rem 1rem 1rem;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+    }
   }
 
   .contact__details {
@@ -80,6 +97,12 @@ footer {
       letter-spacing: 0;
       text-decoration: none;
       text-transform: none;
+      transition: color $base-duration $base-timing;
+
+      &:hover {
+        color: $brand-orange;
+        transition: color $base-duration $base-timing;
+      }
     }
   }
 
