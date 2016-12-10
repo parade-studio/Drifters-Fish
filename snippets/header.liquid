@@ -9,9 +9,6 @@
         <ul>
           <li>
             <a href="/pages/buy" class="{% if link.active %}active{% endif %}">Shop Salmon</a>
-            {% if cart.item_count >= 1 %}
-              <span><a href="/cart" class="cart-count">({{ cart.item_count }})</a></span>
-            {% endif %}
           </li>
           <li>
             <a href="/pages/about-us" {% if link.active %}class="active"{% endif %}>Know Your Fisherman</a>
@@ -24,6 +21,9 @@
           </li>
           <li>
             <a href="/pages/contact" class="{% if link.active %}active{% endif %}">Contact Us</a>
+            {% if cart.item_count >= 1 %}
+              <span><a href="/cart" class="cart-count">({{ cart.item_count }})</a></span>
+            {% endif %}
           </li>
         </ul>
       </div>
