@@ -79,6 +79,12 @@ a.button-round {
   text-decoration: none;
   width: 100%;
   transition: all 0.2s ease; }
+  a.button-round:hover {
+    background: #FC7523;
+    transition: all 0.2s ease; }
+    a.button-round:hover span {
+      color: #fff;
+      transition: all 0.2s ease; }
   @media screen and (min-width: 600px) {
     a.button-round {
       border: 2px solid #FC7523;
@@ -96,12 +102,15 @@ a.button-round {
       width: 100px;
       z-index: 0; }
       a.button-round span {
+        color: #FC7523;
         display: table-cell;
         font-size: 1em;
         line-height: 1.35;
         padding-left: 3px;
         padding-top: 0;
-        vertical-align: middle; } }
+        vertical-align: middle; }
+        a.button-round span:hover {
+          color: #fff; } }
 
 fieldset {
   background-color: transparent;
