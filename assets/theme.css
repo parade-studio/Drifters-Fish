@@ -1025,7 +1025,7 @@ footer {
         width: 90%; } }
   .section--footer small {
     color: #606e76;
-    font-family: 'Simplon Mono Trial';
+    font-family: "Simplon Mono";
     letter-spacing: 0.15em;
     text-transform: uppercase; }
   .section--footer ul {
@@ -1094,7 +1094,7 @@ footer {
     background: transparent;
     border: none;
     color: #FC7523;
-    font-family: 'Simplon Mono Trial';
+    font-family: "Simplon Mono";
     font-size: 0.512em;
     letter-spacing: 0.15rem;
     min-width: 50px;

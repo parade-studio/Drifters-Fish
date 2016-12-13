@@ -67,7 +67,7 @@ footer {
 
   small {
     color: $blue-gray;
-    font-family: 'Simplon Mono Trial';
+    font-family: $secondary-font-family;
     letter-spacing: 0.15em;
     text-transform: uppercase;
   }
@@ -154,7 +154,7 @@ footer {
       background: transparent;
       border: none;
       color: $brand-orange;
-      font-family: 'Simplon Mono Trial';
+      font-family: $secondary-font-family;
       font-size: modular-scale(-3);
       letter-spacing: 0.15rem;
       min-width: 50px;
